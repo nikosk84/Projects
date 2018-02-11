@@ -1,131 +1,106 @@
 ﻿using System.Windows.Forms;
-using System.Diagnostics;
 using System.Net;
-using System.Threading;
 using System;
 using System.ComponentModel;
+using System.Diagnostics;
 
 namespace FileDownloader
 {
     public partial class FileDownloaderForm : Form
     {
-         /* Incomplete Tasks
-         * A progress bar with the state of the transfer
-         * Estimated time left
-         */
 
         public FileDownloaderForm()
         {
             InitializeComponent();
-            //Put cursor into the URL text box when the program runs
             textUrl.Focus();
         }
 
         /// <summary>
-        /// Private variables
+        /// Error message for blank text boxes using the error provider
         /// </summary>
-        private WebClient webClient;
-        private Stopwatch stopWatch = new Stopwatch();
-        private string savePath = @"MySavePath";
+        private String errorMessage = "Please check that all fields are filled in";
 
         /// <summary>
-        /// On-Form load
+        /// Stopwatch to be used to calculate transfer rate of download
         /// </summary>
-        /// <param name="sender"></param>
-        /// <param name="e"></param>
-        private void FileDownloaderForm_Load(object sender, EventArgs e)
-        {
-            webClient = new WebClient();
-            //Handles DownloadProgressChanged event
-            webClient.DownloadProgressChanged += new DownloadProgressChangedEventHandler(WebClient_DownloadProgressChanged);
-            //Handles event of async operation
-            webClient.DownloadFileCompleted += new AsyncCompletedEventHandler(WebClient_DownloadFileCompleted);
-        }
+        Stopwatch stopWatch = new Stopwatch();
 
         /// <summary>
-        /// Download button on-click
+        /// When the Download File button is clicked the user is prompted to name the file to be downloaded and to choose a save location for it
         /// </summary>
         /// <param name="sender"></param>
         /// <param name="e"></param>
         private void DownloadButton_Click(object sender, EventArgs e)
         {
-            //Username and password strings
-            string userName = textUserName.Text;
-            string password = textPassword.Text;
+            SaveFileDialog saveFile = new SaveFileDialog();
 
-            if (!string.IsNullOrEmpty(userName) && !string.IsNullOrEmpty(password))
+            if (saveFile.ShowDialog() == DialogResult.OK)
             {
-                if (!backgroundWorker.IsBusy)
-                {
-                    //Execute background worker
-                    backgroundWorker.RunWorkerAsync();
-                }
-            }
-            else
-            {
-                //If Username and Password haven't been entered
-                MessageBox.Show("Check credentials and try again", "Message", MessageBoxButtons.OK, MessageBoxIcon.Warning);
-            }
+                stopWatch.Start();
+                WebClient webClient = new WebClient();
+                webClient.UseDefaultCredentials = true;
+                webClient.Credentials = new NetworkCredential(textUserName.Text, textPassword.Text);
+                webClient.DownloadFileAsync(new Uri(textUrl.Text), saveFile.FileName);
+                webClient.DownloadFileCompleted += new AsyncCompletedEventHandler(WebClient_DownloadFileCompleted);
+                webClient.DownloadProgressChanged += new DownloadProgressChangedEventHandler(WebClient_DownloadProgressChanged);
+            }  
         }
 
         /// <summary>
-        /// Background Worker executes the thread which connects to a server, gets a file, and saves it to a location
-        /// </summary>
-        /// <param name="sender"></param>
-        /// <param name="e"></param>
-        private void backgroundWorker_DoWork(object sender, DoWorkEventArgs e)
-        {
-            if (!backgroundWorker.CancellationPending)
-            {
-                //URL
-                string url = textUrl.Text;
-                if (!string.IsNullOrEmpty(url))
-                {
-                    webClient.Credentials = new NetworkCredential(textUserName.Text, textPassword.Text);
-
-                    Thread thread = new Thread(() =>
-                    {
-                        stopWatch.Start();
-                        Uri uri = new Uri(url);
-                        string fileName = System.IO.Path.GetFileName(uri.AbsolutePath);
-                        webClient.DownloadFileAsync(uri, savePath);
-                    });
-                    //Fires the Thread start delegate and invokes method
-                    thread.Start();
-                }
-                else
-                {
-                    MessageBox.Show("Check URL", "Message", MessageBoxButtons.OK, MessageBoxIcon.Warning);
-                }
-            }
-        }
-
-        /// <summary>
-        /// What we want happening during the download. Update labels, counts etc.
+        /// Processes while the download is happening
         /// </summary>
         /// <param name="sender"></param>
         /// <param name="e"></param>
         private void WebClient_DownloadProgressChanged(object sender, DownloadProgressChangedEventArgs e)
         {
-            //Executes delegate
-            Invoke(new MethodInvoker(delegate ()
-            {
-                showTransferRate.Text = string.Format("{0} bytes/s", (e.BytesReceived / 1024d / stopWatch.Elapsed.TotalSeconds).ToString("0.00##"));
-                showDownloadedBytes.Text = e.BytesReceived.ToString(); 
-            })); 
+            showPercentage.Text = "Downloading..." + e.ProgressPercentage.ToString();
+            progressBar.Value = e.ProgressPercentage;
+            showBytesReceived.Text = e.BytesReceived.ToString();
+            showTransferRate.Text = string.Format("{0} bytes/s", (e.BytesReceived / 1024d / stopWatch.Elapsed.TotalSeconds).ToString("0.00"));
         }
 
         /// <summary>
-        /// Download completed. Closing doors. Stopping clocks.
+        /// When download completes, tell the user and release all resources used by WebClient
         /// </summary>
         /// <param name="sender"></param>
         /// <param name="e"></param>
         private void WebClient_DownloadFileCompleted(object sender, AsyncCompletedEventArgs e)
         {
-            stopWatch.Stop();
+            MessageBox.Show("File downloaded", "Message",MessageBoxButtons.OK, MessageBoxIcon.Information);
             ((WebClient)sender).Dispose();
-            backgroundWorker.CancelAsync();
-            MessageBox.Show("File downloaded to " + savePath, "Message", MessageBoxButtons.OK, MessageBoxIcon.Information);
+        }
+
+        /// <summary>
+        /// Text Box Validations. Not allowing empty boxes
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
+        private void textUserName_Validating(object sender, CancelEventArgs e)
+        {
+            if (string.IsNullOrEmpty(textUserName.Text))
+            {
+                e.Cancel = true;
+                errorProvider.SetError(textUserName, errorMessage);
+            }
+        }
+
+        private void textPassword_Validating(object sender, CancelEventArgs e)
+        {
+            if (string.IsNullOrEmpty(textPassword.Text))
+            {
+                e.Cancel = true;
+                errorProvider.SetError(textPassword, errorMessage);
+            }
+
+        }
+
+        private void textUrl_Validating(object sender, CancelEventArgs e)
+        {
+            if (string.IsNullOrEmpty(textUrl.Text))
+            {
+                e.Cancel = true;
+                errorProvider.SetError(textUrl, errorMessage);
+            }
         }
     }
 }
