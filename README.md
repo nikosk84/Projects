@@ -2,7 +2,7 @@
 
 Branch that holds various personal projects.
 
-# Hospital Management System
+# Hospital Management System (.NET Framework 4.6.1)
 
 Hospital Management System uses C# in Visual Studio and Microsoft SSMS is a Hospital Management System and its first steps will be to support CRUD. Its first development stage will involve:
 
@@ -12,3 +12,7 @@ Hospital Management System uses C# in Visual Studio and Microsoft SSMS is a Hosp
 4. Deleting any existing record from the database.
 
 Hospital Management System has a goal of becoming a small sized, satisfactory Hospital Management System with useful features.
+
+# File Downloader (.NET Framework 4.0)
+
+A simple file downloader that can display download progress, bytes received and download transfer rate. The next step is to display the download time remaining.
