@@ -8,7 +8,6 @@ namespace FileDownloader
 {
     public partial class FileDownloaderForm : Form
     {
-
         public FileDownloaderForm()
         {
             InitializeComponent();
@@ -26,10 +25,12 @@ namespace FileDownloader
         Stopwatch stopWatch = new Stopwatch();
 
         /// <summary>
-        /// When the Download File button is clicked the user is prompted to name the file to be downloaded and to choose a save location for it
+        /// When the Download File button is clicked the user is asked to name the file 
+        /// to be downloaded and to choose a save location for it
         /// </summary>
         /// <param name="sender"></param>
         /// <param name="e"></param>
+        
         private void DownloadButton_Click(object sender, EventArgs e)
         {
             SaveFileDialog saveFile = new SaveFileDialog();
@@ -53,7 +54,7 @@ namespace FileDownloader
         /// <param name="e"></param>
         private void WebClient_DownloadProgressChanged(object sender, DownloadProgressChangedEventArgs e)
         {
-            showPercentage.Text = "Downloading..." + e.ProgressPercentage.ToString();
+            showPercentage.Text = e.ProgressPercentage.ToString() + "%";
             progressBar.Value = e.ProgressPercentage;
             showBytesReceived.Text = e.BytesReceived.ToString();
             showTransferRate.Text = string.Format("{0} bytes/s", (e.BytesReceived / 1024d / stopWatch.Elapsed.TotalSeconds).ToString("0.00"));
@@ -91,7 +92,6 @@ namespace FileDownloader
                 e.Cancel = true;
                 errorProvider.SetError(textPassword, errorMessage);
             }
-
         }
 
         private void textUrl_Validating(object sender, CancelEventArgs e)

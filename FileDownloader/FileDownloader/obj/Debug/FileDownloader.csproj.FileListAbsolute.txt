@@ -5,3 +5,11 @@ C:\Users\Home\Documents\Visual Studio 2015\Projects\FileDownloader\FileDownloade
 C:\Users\Home\Documents\Visual Studio 2015\Projects\FileDownloader\FileDownloader\obj\Debug\FileDownloader.csproj.GenerateResource.Cache
 C:\Users\Home\Documents\Visual Studio 2015\Projects\FileDownloader\FileDownloader\obj\Debug\FileDownloader.exe
 C:\Users\Home\Documents\Visual Studio 2015\Projects\FileDownloader\FileDownloader\obj\Debug\FileDownloader.pdb
+C:\Users\Nikos\Documents\Visual Studio 2015\Projects\FileDownloader\FileDownloader\obj\Debug\FileDownloader.exe
+C:\Users\Nikos\Documents\Visual Studio 2015\Projects\FileDownloader\FileDownloader\obj\Debug\FileDownloader.pdb
+C:\Users\Nikos\Documents\Visual Studio 2015\Projects\FileDownloader\FileDownloader\bin\Debug\FileDownloader.exe
+C:\Users\Nikos\Documents\Visual Studio 2015\Projects\FileDownloader\FileDownloader\bin\Debug\FileDownloader.pdb
+C:\Users\Nikos\Documents\Visual Studio 2015\Projects\FileDownloader\FileDownloader\obj\Debug\FileDownloader.csprojResolveAssemblyReference.cache
+C:\Users\Nikos\Documents\Visual Studio 2015\Projects\FileDownloader\FileDownloader\obj\Debug\FileDownloader.FileDownloaderForm.resources
+C:\Users\Nikos\Documents\Visual Studio 2015\Projects\FileDownloader\FileDownloader\obj\Debug\FileDownloader.Properties.Resources.resources
+C:\Users\Nikos\Documents\Visual Studio 2015\Projects\FileDownloader\FileDownloader\obj\Debug\FileDownloader.csproj.GenerateResource.Cache
