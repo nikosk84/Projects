@@ -85,7 +85,6 @@
             this.textUrl.Name = "textUrl";
             this.textUrl.Size = new System.Drawing.Size(308, 32);
             this.textUrl.TabIndex = 6;
-            this.textUrl.Validating += new System.ComponentModel.CancelEventHandler(this.textUrl_Validating);
             // 
             // textPassword
             // 
@@ -96,7 +95,6 @@
             this.textPassword.PasswordChar = '*';
             this.textPassword.Size = new System.Drawing.Size(306, 30);
             this.textPassword.TabIndex = 10;
-            this.textPassword.Validating += new System.ComponentModel.CancelEventHandler(this.textPassword_Validating);
             // 
             // textUserName
             // 
@@ -106,7 +104,6 @@
             this.textUserName.Name = "textUserName";
             this.textUserName.Size = new System.Drawing.Size(306, 30);
             this.textUserName.TabIndex = 11;
-            this.textUserName.Validating += new System.ComponentModel.CancelEventHandler(this.textUserName_Validating);
             // 
             // labelUserName
             // 

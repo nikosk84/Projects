@@ -17,7 +17,7 @@ namespace FileDownloader
         /// <summary>
         /// Error message for blank text boxes using the error provider
         /// </summary>
-        private String errorMessage = "Please check that all fields are filled in";
+        private String errorMessage = "Check fields";
 
         /// <summary>
         /// Stopwatch to be used to calculate transfer rate of download
@@ -30,21 +30,39 @@ namespace FileDownloader
         /// </summary>
         /// <param name="sender"></param>
         /// <param name="e"></param>
-        
+
         private void DownloadButton_Click(object sender, EventArgs e)
         {
+            UserModel user = new UserModel();
             SaveFileDialog saveFile = new SaveFileDialog();
 
-            if (saveFile.ShowDialog() == DialogResult.OK)
+            //If a text box is empty, tell the user, otherwise perform download
+            if (string.IsNullOrEmpty(textUserName.Text))
             {
-                stopWatch.Start();
-                WebClient webClient = new WebClient();
-                webClient.UseDefaultCredentials = true;
-                webClient.Credentials = new NetworkCredential(textUserName.Text, textPassword.Text);
-                webClient.DownloadFileAsync(new Uri(textUrl.Text), saveFile.FileName);
-                webClient.DownloadFileCompleted += new AsyncCompletedEventHandler(WebClient_DownloadFileCompleted);
-                webClient.DownloadProgressChanged += new DownloadProgressChangedEventHandler(WebClient_DownloadProgressChanged);
-            }  
+                errorProvider.SetError(textUserName, errorMessage);
+            }
+            else if (string.IsNullOrEmpty(textPassword.Text))
+            {
+                errorProvider.SetError(textPassword, errorMessage);
+            }
+            else if (string.IsNullOrEmpty(textUrl.Text))
+            {
+                errorProvider.SetError(textUrl, errorMessage);
+            }
+            else
+            {
+                //Since no text box is empty, start process
+                if (saveFile.ShowDialog() == DialogResult.OK)
+                {
+                    stopWatch.Start();
+
+                    WebClient webClient = new WebClient();
+                    webClient.Credentials = new NetworkCredential(user.GetUserName(textUserName.Text), user.GetPassword(textPassword.Text));
+                    webClient.DownloadFileAsync(new Uri(textUrl.Text), saveFile.FileName);
+                    webClient.DownloadFileCompleted += new AsyncCompletedEventHandler(WebClient_DownloadFileCompleted);
+                    webClient.DownloadProgressChanged += new DownloadProgressChangedEventHandler(WebClient_DownloadProgressChanged);
+                }
+            }
         }
 
         /// <summary>
@@ -67,40 +85,9 @@ namespace FileDownloader
         /// <param name="e"></param>
         private void WebClient_DownloadFileCompleted(object sender, AsyncCompletedEventArgs e)
         {
-            MessageBox.Show("File downloaded", "Message",MessageBoxButtons.OK, MessageBoxIcon.Information);
+            MessageBox.Show("File downloaded", "Message", MessageBoxButtons.OK, MessageBoxIcon.Information);
+
             ((WebClient)sender).Dispose();
-        }
-
-        /// <summary>
-        /// Text Box Validations. Not allowing empty boxes
-        /// </summary>
-        /// <param name="sender"></param>
-        /// <param name="e"></param>
-        private void textUserName_Validating(object sender, CancelEventArgs e)
-        {
-            if (string.IsNullOrEmpty(textUserName.Text))
-            {
-                e.Cancel = true;
-                errorProvider.SetError(textUserName, errorMessage);
-            }
-        }
-
-        private void textPassword_Validating(object sender, CancelEventArgs e)
-        {
-            if (string.IsNullOrEmpty(textPassword.Text))
-            {
-                e.Cancel = true;
-                errorProvider.SetError(textPassword, errorMessage);
-            }
-        }
-
-        private void textUrl_Validating(object sender, CancelEventArgs e)
-        {
-            if (string.IsNullOrEmpty(textUrl.Text))
-            {
-                e.Cancel = true;
-                errorProvider.SetError(textUrl, errorMessage);
-            }
         }
     }
 }
