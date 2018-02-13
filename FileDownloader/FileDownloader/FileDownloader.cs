@@ -33,9 +33,6 @@ namespace FileDownloader
 
         private void DownloadButton_Click(object sender, EventArgs e)
         {
-            UserModel user = new UserModel();
-            SaveFileDialog saveFile = new SaveFileDialog();
-
             //If a text box is empty, do not perform download and tell user
             if (string.IsNullOrEmpty(textUserName.Text))
             {
@@ -52,6 +49,9 @@ namespace FileDownloader
             else
             {
                 //Since no text box is empty, clear errors and start process
+                UserModel user = new UserModel();
+                SaveFileDialog saveFile = new SaveFileDialog();
+
                 if (saveFile.ShowDialog() == DialogResult.OK)
                 {
                     errorProvider.Clear();
