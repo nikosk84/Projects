@@ -36,7 +36,7 @@ namespace FileDownloader
             UserModel user = new UserModel();
             SaveFileDialog saveFile = new SaveFileDialog();
 
-            //If a text box is empty, tell the user, otherwise perform download
+            //If a text box is empty, do not perform download and tell user
             if (string.IsNullOrEmpty(textUserName.Text))
             {
                 errorProvider.SetError(textUserName, errorMessage);
@@ -51,11 +51,12 @@ namespace FileDownloader
             }
             else
             {
-                //Since no text box is empty, start process
+                //Since no text box is empty, clear errors and start process
                 if (saveFile.ShowDialog() == DialogResult.OK)
                 {
+                    errorProvider.Clear();
                     stopWatch.Start();
-
+                    
                     WebClient webClient = new WebClient();
                     webClient.Credentials = new NetworkCredential(user.GetUserName(textUserName.Text), user.GetPassword(textPassword.Text));
                     webClient.DownloadFileAsync(new Uri(textUrl.Text), saveFile.FileName);
