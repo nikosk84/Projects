@@ -15,4 +15,4 @@ Hospital Management System has a goal of becoming a small sized, satisfactory Ho
 
 # File Downloader (.NET Framework 4.0)
 
-A simple file downloader that can display download progress, bytes received and download transfer rate. It uses the WebClient class and its next step is to display the download time remaining.
+A simple file downloader that can display download progress, bytes received, download transfer rate and remaining download time. It also gives the user the option to provide credentials if a server requires a log on.
