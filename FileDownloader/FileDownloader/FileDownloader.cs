@@ -117,8 +117,6 @@ namespace FileDownloader
                 MessageBox.Show("File downloaded", "Message", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 progressBar.Value = 0;
                 ((WebClient)sender).Dispose();
-                useCredsCheck.Enabled = true;
-                DownloadButton.Enabled = true; 
             }
             else
             {
