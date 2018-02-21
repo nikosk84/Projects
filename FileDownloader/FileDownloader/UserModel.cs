@@ -1,7 +1,7 @@
 ﻿namespace FileDownloader
 {
     /// <summary>
-    /// Model for user credentials that are used to connect to server
+    /// User model
     /// </summary>
     public class UserModel
     {   

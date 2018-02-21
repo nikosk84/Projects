@@ -48,7 +48,7 @@
             // 
             this.LabelMain.AutoSize = true;
             this.LabelMain.Font = new System.Drawing.Font("Segoe UI", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.LabelMain.Location = new System.Drawing.Point(273, 12);
+            this.LabelMain.Location = new System.Drawing.Point(250, 12);
             this.LabelMain.Name = "LabelMain";
             this.LabelMain.Size = new System.Drawing.Size(162, 30);
             this.LabelMain.TabIndex = 1;
@@ -58,7 +58,7 @@
             // 
             this.UrlLbl.AutoSize = true;
             this.UrlLbl.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(161)));
-            this.UrlLbl.Location = new System.Drawing.Point(202, 172);
+            this.UrlLbl.Location = new System.Drawing.Point(177, 172);
             this.UrlLbl.Name = "UrlLbl";
             this.UrlLbl.Size = new System.Drawing.Size(42, 21);
             this.UrlLbl.TabIndex = 2;
@@ -67,7 +67,7 @@
             // DownloadButton
             // 
             this.DownloadButton.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(161)));
-            this.DownloadButton.Location = new System.Drawing.Point(144, 236);
+            this.DownloadButton.Location = new System.Drawing.Point(119, 236);
             this.DownloadButton.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.DownloadButton.Name = "DownloadButton";
             this.DownloadButton.Size = new System.Drawing.Size(119, 41);
@@ -78,7 +78,7 @@
             // 
             // textUrl
             // 
-            this.textUrl.Location = new System.Drawing.Point(263, 161);
+            this.textUrl.Location = new System.Drawing.Point(238, 161);
             this.textUrl.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.textUrl.Multiline = true;
             this.textUrl.Name = "textUrl";
@@ -87,7 +87,7 @@
             // 
             // textPassword
             // 
-            this.textPassword.Location = new System.Drawing.Point(263, 123);
+            this.textPassword.Location = new System.Drawing.Point(238, 123);
             this.textPassword.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.textPassword.Multiline = true;
             this.textPassword.Name = "textPassword";
@@ -97,7 +97,7 @@
             // 
             // textUserName
             // 
-            this.textUserName.Location = new System.Drawing.Point(263, 89);
+            this.textUserName.Location = new System.Drawing.Point(238, 89);
             this.textUserName.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.textUserName.Multiline = true;
             this.textUserName.Name = "textUserName";
@@ -108,7 +108,7 @@
             // 
             this.labelUserName.AutoSize = true;
             this.labelUserName.Font = new System.Drawing.Font("Segoe UI", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelUserName.Location = new System.Drawing.Point(141, 89);
+            this.labelUserName.Location = new System.Drawing.Point(116, 89);
             this.labelUserName.Name = "labelUserName";
             this.labelUserName.Size = new System.Drawing.Size(116, 30);
             this.labelUserName.TabIndex = 12;
@@ -118,7 +118,7 @@
             // 
             this.labelPassword.AutoSize = true;
             this.labelPassword.Font = new System.Drawing.Font("Segoe UI", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelPassword.Location = new System.Drawing.Point(145, 123);
+            this.labelPassword.Location = new System.Drawing.Point(120, 123);
             this.labelPassword.Name = "labelPassword";
             this.labelPassword.Size = new System.Drawing.Size(99, 30);
             this.labelPassword.TabIndex = 13;
@@ -126,7 +126,7 @@
             // 
             // progressBar
             // 
-            this.progressBar.Location = new System.Drawing.Point(144, 200);
+            this.progressBar.Location = new System.Drawing.Point(119, 200);
             this.progressBar.Name = "progressBar";
             this.progressBar.Size = new System.Drawing.Size(427, 29);
             this.progressBar.TabIndex = 19;
@@ -138,7 +138,7 @@
             // useCredsCheck
             // 
             this.useCredsCheck.AutoSize = true;
-            this.useCredsCheck.Location = new System.Drawing.Point(263, 61);
+            this.useCredsCheck.Location = new System.Drawing.Point(238, 61);
             this.useCredsCheck.Name = "useCredsCheck";
             this.useCredsCheck.Size = new System.Drawing.Size(118, 21);
             this.useCredsCheck.TabIndex = 20;
@@ -149,7 +149,7 @@
             // CancelDownload
             // 
             this.CancelDownload.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(161)));
-            this.CancelDownload.Location = new System.Drawing.Point(452, 236);
+            this.CancelDownload.Location = new System.Drawing.Point(427, 236);
             this.CancelDownload.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.CancelDownload.Name = "CancelDownload";
             this.CancelDownload.Size = new System.Drawing.Size(119, 41);
@@ -162,7 +162,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 17F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(713, 298);
+            this.ClientSize = new System.Drawing.Size(663, 298);
             this.Controls.Add(this.CancelDownload);
             this.Controls.Add(this.useCredsCheck);
             this.Controls.Add(this.progressBar);
