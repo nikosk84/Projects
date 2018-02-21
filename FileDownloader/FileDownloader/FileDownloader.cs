@@ -115,13 +115,16 @@ namespace FileDownloader
             if (!e.Cancelled)
             {
                 MessageBox.Show("File downloaded", "Message", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                webClient.Dispose();
+                useCredsCheck.Enabled = true;
+                DownloadButton.Enabled = true;
                 progressBar.Value = 0;
-                ((WebClient)sender).Dispose();
+                Text = string.Empty;
             }
             else
             {
                 MessageBox.Show("Process cancelled", "Cancelled", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                ((WebClient)sender).Dispose();
+                webClient.Dispose();
                 useCredsCheck.Enabled = true;
                 DownloadButton.Enabled = true;
                 progressBar.Value = 0;
@@ -199,12 +202,6 @@ namespace FileDownloader
         private void CancelDownload_Click(object sender, EventArgs e)
         {
             webClient.CancelAsync();
-
-            textUserName.Enabled = false;
-            textPassword.Enabled = false;
-            useCredsCheck.Enabled = true;
-            textUrl.Text = "";
-            textUrl.Focus();
         }
     }
 }
