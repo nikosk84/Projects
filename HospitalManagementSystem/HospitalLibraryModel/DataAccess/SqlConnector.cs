@@ -41,7 +41,7 @@ namespace HospitalLibrary.DataAccess
             {
                 var parameters = new DynamicParameters();
                 parameters.Add("@UserName", sysUser.UserName);
-                parameters.Add("Password", sysUser.Password);
+                parameters.Add("@Password", sysUser.Password);
 
                 connection.Execute("dbo.spLogin", parameters, commandType: CommandType.StoredProcedure);
 
