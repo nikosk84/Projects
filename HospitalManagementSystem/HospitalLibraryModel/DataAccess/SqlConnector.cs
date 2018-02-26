@@ -8,7 +8,6 @@ namespace HospitalLibrary.DataAccess
 {
     public class SqlConnector : IDataConnection
     {
-        //TODO - FIX PATIENT
 
         public EmployeeModel InsertEmployee (EmployeeModel employee)
         {
@@ -33,6 +32,21 @@ namespace HospitalLibrary.DataAccess
         public PatientModel InsertPatient (PatientModel patient)
         {
             throw new NotImplementedException();
+        }
+
+        public SysUserModel LogOn(SysUserModel sysUser)
+        {
+            //Log on not working
+            using (IDbConnection connection = new System.Data.SqlClient.SqlConnection(GlobalConfiguration.ConnVal("HospitalModelDB")))
+            {
+                var parameters = new DynamicParameters();
+                parameters.Add("@UserName", sysUser.UserName);
+                parameters.Add("Password", sysUser.Password);
+
+                connection.Execute("dbo.spLogin", parameters, commandType: CommandType.StoredProcedure);
+
+                return sysUser;
+            }
         }
     }
 }

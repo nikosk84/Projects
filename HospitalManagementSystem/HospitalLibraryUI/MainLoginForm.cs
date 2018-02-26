@@ -1,6 +1,6 @@
 ﻿using HospitalLibrary.DataAccess;
+using HospitalLibrary.Models;
 using System;
-using System.Data;
 using System.Windows.Forms;
 
 namespace HospitalSystemUI
@@ -10,32 +10,6 @@ namespace HospitalSystemUI
         public MainLogin()
         {
             InitializeComponent();
-        }
-
-        //TODO - REDO LOGIN
-
-        private void LoginBtn_Click(object sender, EventArgs e)
-        {
-            //try
-            //{
-            //    using (IDbConnection login = new System.Data.SqlClient.SqlConnection(GlobalConfiguration.ConnVal("HospitalStaffModelDB")))
-            //    {
-            //        {
-            //            var result = login.QueryFirstOrDefault<SysUser>("spLogin", new { UserName = userNameTb.Text, Password = passwordTb.Text }, commandType: CommandType.StoredProcedure);
-            //            if (result.UserName == userNameTb.Text && result.Password == passwordTb.Text)
-            //            {
-            //                login.Open();
-            //                Hide();
-            //                MainMenu mainLogin = new MainMenu();
-            //                mainLogin.Show();
-            //            }
-            //        }
-            //    }
-            //}
-            //catch
-            //{
-            //    MessageBox.Show("Check username and password", "Login Error", MessageBoxButtons.OK);
-            //}
         }
 
         private void UserNameTb_TextChanged(object sender, EventArgs e)
@@ -50,6 +24,22 @@ namespace HospitalSystemUI
             passwordTb.MaxLength = 20;
             passwordTb.CharacterCasing = CharacterCasing.Lower;
             passwordTb.TextAlign = HorizontalAlignment.Center;
+        }
+
+        private void LoginBtn_Click_1(object sender, EventArgs e)
+        {
+            //Not working
+
+            SysUserModel sysUser = new SysUserModel
+            {
+                UserName = userNameTb.Text, Password = passwordTb.Text
+            };
+
+            foreach (IDataConnection connect in GlobalConfiguration.Connection)
+            {
+                connect.LogOn(sysUser);
+            }
+
         }
     }
 }
