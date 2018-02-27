@@ -48,8 +48,8 @@
             this.clearFieldsBtn = new System.Windows.Forms.Button();
             this.PositionsCheckedBox = new System.Windows.Forms.CheckedListBox();
             this.label1 = new System.Windows.Forms.Label();
-            this.formValidator = new System.Windows.Forms.ErrorProvider(this.components);
-            ((System.ComponentModel.ISupportInitialize)(this.formValidator)).BeginInit();
+            this.employeeFormValidator = new System.Windows.Forms.ErrorProvider(this.components);
+            ((System.ComponentModel.ISupportInitialize)(this.employeeFormValidator)).BeginInit();
             this.SuspendLayout();
             // 
             // addNewRecordLbl
@@ -239,9 +239,9 @@
             this.label1.TabIndex = 37;
             this.label1.Text = "Make one choice";
             // 
-            // formValidator
+            // employeeFormValidator
             // 
-            this.formValidator.ContainerControl = this;
+            this.employeeFormValidator.ContainerControl = this;
             // 
             // CreateEmployee
             // 
@@ -270,7 +270,7 @@
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "CreateEmployee";
             this.Text = "Add New Employee";
-            ((System.ComponentModel.ISupportInitialize)(this.formValidator)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.employeeFormValidator)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -295,7 +295,7 @@
         public System.Windows.Forms.TextBox email;
         public System.Windows.Forms.TextBox cellNo;
         public System.Windows.Forms.TextBox position;
-        private System.Windows.Forms.ErrorProvider formValidator;
+        private System.Windows.Forms.ErrorProvider employeeFormValidator;
         public System.Windows.Forms.CheckedListBox PositionsCheckedBox;
     }
 }

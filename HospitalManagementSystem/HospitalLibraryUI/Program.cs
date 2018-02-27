@@ -13,9 +13,10 @@ namespace HospitalSystemUI
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
+            
             //Initialize connection
             HospitalLibrary.DataAccess.GlobalConfiguration.InitializeConnections(true);
-            Application.Run(new CreateEmployee());
+            Application.Run(new MainLogin());
         }
     }
 }

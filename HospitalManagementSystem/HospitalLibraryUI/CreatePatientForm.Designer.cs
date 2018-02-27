@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(CreatePatient));
             this.addNewPatientLbl = new System.Windows.Forms.Label();
             this.firstName = new System.Windows.Forms.TextBox();
@@ -47,11 +48,12 @@
             this.bedNoLbl = new System.Windows.Forms.Label();
             this.hasHealthCardLbl = new System.Windows.Forms.Label();
             this.yesCheckBox = new System.Windows.Forms.CheckBox();
-            this.noCheckBox = new System.Windows.Forms.CheckBox();
             this.genderComboBox = new System.Windows.Forms.ComboBox();
             this.savePatientBtn = new System.Windows.Forms.Button();
             this.returnBtn = new System.Windows.Forms.Button();
             this.ClearAll = new System.Windows.Forms.Button();
+            this.patientFormValidator = new System.Windows.Forms.ErrorProvider(this.components);
+            ((System.ComponentModel.ISupportInitialize)(this.patientFormValidator)).BeginInit();
             this.SuspendLayout();
             // 
             // addNewPatientLbl
@@ -220,16 +222,6 @@
             this.yesCheckBox.Text = "Yes";
             this.yesCheckBox.UseVisualStyleBackColor = true;
             // 
-            // noCheckBox
-            // 
-            this.noCheckBox.AutoSize = true;
-            this.noCheckBox.Location = new System.Drawing.Point(292, 283);
-            this.noCheckBox.Name = "noCheckBox";
-            this.noCheckBox.Size = new System.Drawing.Size(41, 17);
-            this.noCheckBox.TabIndex = 25;
-            this.noCheckBox.Text = "No";
-            this.noCheckBox.UseVisualStyleBackColor = true;
-            // 
             // genderComboBox
             // 
             this.genderComboBox.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
@@ -244,7 +236,7 @@
             // 
             // savePatientBtn
             // 
-            this.savePatientBtn.Location = new System.Drawing.Point(131, 351);
+            this.savePatientBtn.Location = new System.Drawing.Point(141, 315);
             this.savePatientBtn.Name = "savePatientBtn";
             this.savePatientBtn.Size = new System.Drawing.Size(99, 35);
             this.savePatientBtn.TabIndex = 27;
@@ -254,7 +246,7 @@
             // 
             // returnBtn
             // 
-            this.returnBtn.Location = new System.Drawing.Point(371, 351);
+            this.returnBtn.Location = new System.Drawing.Point(381, 315);
             this.returnBtn.Name = "returnBtn";
             this.returnBtn.Size = new System.Drawing.Size(99, 35);
             this.returnBtn.TabIndex = 28;
@@ -264,7 +256,7 @@
             // 
             // ClearAll
             // 
-            this.ClearAll.Location = new System.Drawing.Point(248, 351);
+            this.ClearAll.Location = new System.Drawing.Point(258, 315);
             this.ClearAll.Name = "ClearAll";
             this.ClearAll.Size = new System.Drawing.Size(99, 35);
             this.ClearAll.TabIndex = 29;
@@ -272,17 +264,20 @@
             this.ClearAll.UseVisualStyleBackColor = true;
             this.ClearAll.Click += new System.EventHandler(this.ClearAll_Click);
             // 
+            // patientFormValidator
+            // 
+            this.patientFormValidator.ContainerControl = this;
+            // 
             // CreatePatient
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
-            this.ClientSize = new System.Drawing.Size(598, 403);
+            this.ClientSize = new System.Drawing.Size(598, 366);
             this.Controls.Add(this.ClearAll);
             this.Controls.Add(this.returnBtn);
             this.Controls.Add(this.savePatientBtn);
             this.Controls.Add(this.genderComboBox);
-            this.Controls.Add(this.noCheckBox);
             this.Controls.Add(this.yesCheckBox);
             this.Controls.Add(this.hasHealthCardLbl);
             this.Controls.Add(this.bedNoLbl);
@@ -305,6 +300,8 @@
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "CreatePatient";
             this.Text = "Add New Patient";
+            this.Validating += new System.ComponentModel.CancelEventHandler(this.CreatePatient_Validating);
+            ((System.ComponentModel.ISupportInitialize)(this.patientFormValidator)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -330,10 +327,10 @@
         private System.Windows.Forms.Label bedNoLbl;
         private System.Windows.Forms.Label hasHealthCardLbl;
         private System.Windows.Forms.CheckBox yesCheckBox;
-        private System.Windows.Forms.CheckBox noCheckBox;
         private System.Windows.Forms.ComboBox genderComboBox;
         private System.Windows.Forms.Button savePatientBtn;
         private System.Windows.Forms.Button returnBtn;
         private System.Windows.Forms.Button ClearAll;
+        private System.Windows.Forms.ErrorProvider patientFormValidator;
     }
 }

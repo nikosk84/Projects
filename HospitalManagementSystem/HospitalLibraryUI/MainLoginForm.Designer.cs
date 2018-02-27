@@ -32,7 +32,7 @@
             this.titleLbl = new System.Windows.Forms.Label();
             this.userNameLbl = new System.Windows.Forms.Label();
             this.passwordLbl = new System.Windows.Forms.Label();
-            this.loginBtn = new System.Windows.Forms.Button();
+            this.LoginBtn = new System.Windows.Forms.Button();
             this.passwordTb = new System.Windows.Forms.TextBox();
             this.userNameTb = new System.Windows.Forms.TextBox();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
@@ -70,16 +70,16 @@
             this.passwordLbl.TabIndex = 2;
             this.passwordLbl.Text = "Password";
             // 
-            // loginBtn
+            // LoginBtn
             // 
-            this.loginBtn.Font = new System.Drawing.Font("Segoe UI", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.loginBtn.Location = new System.Drawing.Point(296, 202);
-            this.loginBtn.Name = "loginBtn";
-            this.loginBtn.Size = new System.Drawing.Size(100, 30);
-            this.loginBtn.TabIndex = 3;
-            this.loginBtn.Text = "Login";
-            this.loginBtn.UseVisualStyleBackColor = true;
-            //this.loginBtn.Click += new System.EventHandler(this.LoginBtn_Click);
+            this.LoginBtn.Font = new System.Drawing.Font("Segoe UI", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.LoginBtn.Location = new System.Drawing.Point(296, 202);
+            this.LoginBtn.Name = "LoginBtn";
+            this.LoginBtn.Size = new System.Drawing.Size(100, 30);
+            this.LoginBtn.TabIndex = 3;
+            this.LoginBtn.Text = "Login";
+            this.LoginBtn.UseVisualStyleBackColor = true;
+            this.LoginBtn.Click += new System.EventHandler(this.LoginBtn_Click_1);
             // 
             // passwordTb
             // 
@@ -127,7 +127,7 @@
             this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.userNameTb);
             this.Controls.Add(this.passwordTb);
-            this.Controls.Add(this.loginBtn);
+            this.Controls.Add(this.LoginBtn);
             this.Controls.Add(this.passwordLbl);
             this.Controls.Add(this.userNameLbl);
             this.Controls.Add(this.titleLbl);
@@ -145,7 +145,7 @@
         private System.Windows.Forms.Label titleLbl;
         private System.Windows.Forms.Label userNameLbl;
         private System.Windows.Forms.Label passwordLbl;
-        private System.Windows.Forms.Button loginBtn;
+        private System.Windows.Forms.Button LoginBtn;
         private System.Windows.Forms.TextBox passwordTb;
         private System.Windows.Forms.TextBox userNameTb;
         private System.Windows.Forms.PictureBox pictureBox1;

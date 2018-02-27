@@ -51,7 +51,6 @@ namespace HospitalSystemUI
             }
         }
 
-        //Pass value of selected item to Positions textbox, otherwise display nothing
         private void PositionsCheckedLb_SelectedIndexChanged(object sender, EventArgs e)
         {
             if (PositionsCheckedBox.CheckedItems.Count == 1)
@@ -79,7 +78,7 @@ namespace HospitalSystemUI
             if (String.IsNullOrEmpty(firstName.Text))
             {
                 e.Cancel = true;
-                this.formValidator.SetError(firstName, errorMsg);
+                this.employeeFormValidator.SetError(firstName, errorMsg);
             }
         }
 
@@ -88,7 +87,7 @@ namespace HospitalSystemUI
             if (String.IsNullOrEmpty(lastName.Text))
             {
                 e.Cancel = true;
-                this.formValidator.SetError(lastName, errorMsg);
+                this.employeeFormValidator.SetError(lastName, errorMsg);
             }
         }
     }
