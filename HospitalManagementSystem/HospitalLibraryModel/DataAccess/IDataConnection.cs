@@ -6,6 +6,5 @@ namespace HospitalLibrary.DataAccess
     {
         EmployeeModel InsertEmployee (EmployeeModel employee);
         PatientModel InsertPatient (PatientModel patient);
-        SysUserModel LogOn(SysUserModel sysUser);
     }
 }

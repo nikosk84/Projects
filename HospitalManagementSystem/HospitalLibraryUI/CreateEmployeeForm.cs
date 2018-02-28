@@ -5,11 +5,11 @@ using System.Windows.Forms;
 
 namespace HospitalSystemUI
 {
-    public partial class CreateEmployee : Form
+    public partial class CreateEmployeeForm : Form
     {
         private string errorMsg = "Check field";
 
-        public CreateEmployee()
+        public CreateEmployeeForm()
         {
             InitializeComponent();
         }
@@ -19,19 +19,20 @@ namespace HospitalSystemUI
         /// </summary>
         private void ClearAllFields()
         {
-            foreach (int i in PositionsCheckedBox.CheckedIndices)
+            foreach (int i in PositionsCheckedListBox.CheckedIndices)
             {
-                PositionsCheckedBox.SetItemCheckState(i, CheckState.Unchecked);
+                PositionsCheckedListBox.SetItemCheckState(i, CheckState.Unchecked);
             }
 
-            firstName.Text = String.Empty;
-            lastName.Text = String.Empty;
-            address.Text = String.Empty;
-            email.Text = String.Empty;
-            cellNo.Text = String.Empty;
-            position.Text = String.Empty;
-            PositionsCheckedBox.SelectedIndex = -1;
-            firstName.Focus();
+            FirstNameText.Text = String.Empty;
+            LastNameText.Text = String.Empty;
+            AddressText.Text = String.Empty;
+            EmailText.Text = String.Empty;
+            CellNoText.Text = String.Empty;
+            PositionText.Text = String.Empty;
+            PositionsCheckedListBox.SelectedIndex = -1;
+            EmployeeFormValidator.Clear();
+            FirstNameText.Focus();
         }
 
         /// <summary>
@@ -43,12 +44,12 @@ namespace HospitalSystemUI
         {
             EmployeeModel employee = new EmployeeModel
             {
-                FirstName = firstName.Text,
-                LastName = lastName.Text,
-                HomeAddress = address.Text,
-                EmailAddress = email.Text,
-                CellNumber = cellNo.Text,
-                Position = position.Text
+                FirstName = FirstNameText.Text,
+                LastName = LastNameText.Text,
+                HomeAddress = AddressText.Text,
+                EmailAddress = EmailText.Text,
+                CellNumber = CellNoText.Text,
+                Position = PositionText.Text
             };
 
             foreach (IDataConnection connect in GlobalConfiguration.Connection)
@@ -64,13 +65,13 @@ namespace HospitalSystemUI
         /// <param name="e"></param>
         private void PositionsCheckedLb_SelectedIndexChanged(object sender, EventArgs e)
         {
-            if (PositionsCheckedBox.CheckedItems.Count == 1)
+            if (PositionsCheckedListBox.CheckedItems.Count == 1)
             {
-                position.Text = PositionsCheckedBox.SelectedItem.ToString();
+                PositionText.Text = PositionsCheckedListBox.SelectedItem.ToString();
             }
             else
             {
-                position.Text = String.Empty;
+                PositionText.Text = String.Empty;
             }
         }
 
@@ -81,19 +82,19 @@ namespace HospitalSystemUI
         /// <param name="e"></param>
         private void FirstName_Validating(object sender, System.ComponentModel.CancelEventArgs e)
         {
-            if (String.IsNullOrEmpty(firstName.Text))
+            if (String.IsNullOrEmpty(FirstNameText.Text))
             {
                 e.Cancel = true;
-                employeeFormValidator.SetError(firstName, errorMsg);
+                EmployeeFormValidator.SetError(FirstNameText, errorMsg);
             }
         }
 
         private void LastName_Validating(object sender, System.ComponentModel.CancelEventArgs e)
         {
-            if (String.IsNullOrEmpty(lastName.Text))
+            if (String.IsNullOrEmpty(LastNameText.Text))
             {
                 e.Cancel = true;
-                employeeFormValidator.SetError(lastName, errorMsg);
+                EmployeeFormValidator.SetError(LastNameText, errorMsg);
             }
         }
 
@@ -114,7 +115,7 @@ namespace HospitalSystemUI
         /// <param name="e"></param>
         private void ReturnToMainBtn_Click(object sender, EventArgs e)
         {
-            Close();
+            //To be fixed
         }
     }
 }

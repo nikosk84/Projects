@@ -2,6 +2,9 @@
 {
     public class PatientModel
     {
+        /// <summary>
+        /// Properties of a patient
+        /// </summary>
         public string Id { get; set; }
         public string FirstName { get; set; }
         public string LastName { get; set; }
@@ -14,7 +17,7 @@
         public string HasHealthCard { get; set; }
 
         /// <summary>
-        /// Output string layout
+        /// Output string layout for a returned patient
         /// </summary>
         public string FullPatientInfo
         {

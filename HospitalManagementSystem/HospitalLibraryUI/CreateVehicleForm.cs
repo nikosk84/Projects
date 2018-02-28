@@ -3,11 +3,11 @@ using System.Windows.Forms;
 
 namespace HospitalSystemUI
 {
-    public partial class CreateVehicle : Form
+    public partial class CreateVehicleForm : Form
     {
         //Under construction
 
-        public CreateVehicle()
+        public CreateVehicleForm()
         {
             InitializeComponent();
         }

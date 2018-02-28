@@ -1,6 +1,6 @@
 ﻿namespace HospitalSystemUI
 {
-    partial class CreatePatient
+    partial class CreatePatientForm
     {
         /// <summary>
         /// Required designer variable.
@@ -29,196 +29,196 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(CreatePatient));
-            this.addNewPatientLbl = new System.Windows.Forms.Label();
-            this.FirstName = new System.Windows.Forms.TextBox();
-            this.LastName = new System.Windows.Forms.TextBox();
-            this.Address = new System.Windows.Forms.TextBox();
-            this.ConsultingDoctor = new System.Windows.Forms.TextBox();
-            this.Ward = new System.Windows.Forms.TextBox();
-            this.RoomNo = new System.Windows.Forms.TextBox();
-            this.BedNo = new System.Windows.Forms.TextBox();
-            this.patientFNameLabel = new System.Windows.Forms.Label();
-            this.patientLNameLabel = new System.Windows.Forms.Label();
-            this.patientAddressLabel = new System.Windows.Forms.Label();
-            this.patientGenderLabel = new System.Windows.Forms.Label();
-            this.consDocLabel = new System.Windows.Forms.Label();
-            this.wardLabel = new System.Windows.Forms.Label();
-            this.roomNoLabel = new System.Windows.Forms.Label();
-            this.bedNoLabel = new System.Windows.Forms.Label();
-            this.hasHealthCardLabel = new System.Windows.Forms.Label();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(CreatePatientForm));
+            this.AddPatientTitle = new System.Windows.Forms.Label();
+            this.FirstNameText = new System.Windows.Forms.TextBox();
+            this.LastNameText = new System.Windows.Forms.TextBox();
+            this.AddressText = new System.Windows.Forms.TextBox();
+            this.ConsultingDoctorText = new System.Windows.Forms.TextBox();
+            this.WardText = new System.Windows.Forms.TextBox();
+            this.RoomNoText = new System.Windows.Forms.TextBox();
+            this.BedNoText = new System.Windows.Forms.TextBox();
+            this.FirstNameLabel = new System.Windows.Forms.Label();
+            this.LastNameLabel = new System.Windows.Forms.Label();
+            this.AddressLabel = new System.Windows.Forms.Label();
+            this.GenderLabel = new System.Windows.Forms.Label();
+            this.ConsultingDocLabel = new System.Windows.Forms.Label();
+            this.WardLabel = new System.Windows.Forms.Label();
+            this.RoomNoLabel = new System.Windows.Forms.Label();
+            this.BedNoLabel = new System.Windows.Forms.Label();
+            this.HasHealthCardLabel = new System.Windows.Forms.Label();
             this.YesCheckBox = new System.Windows.Forms.CheckBox();
             this.GenderComboBox = new System.Windows.Forms.ComboBox();
-            this.savePatientBtn = new System.Windows.Forms.Button();
-            this.ReturnBtn = new System.Windows.Forms.Button();
-            this.ClearAll = new System.Windows.Forms.Button();
-            this.patientFormValidator = new System.Windows.Forms.ErrorProvider(this.components);
-            this.healthCardLabel = new System.Windows.Forms.Label();
-            ((System.ComponentModel.ISupportInitialize)(this.patientFormValidator)).BeginInit();
+            this.SavePatientButton = new System.Windows.Forms.Button();
+            this.ReturnButton = new System.Windows.Forms.Button();
+            this.ClearAllButton = new System.Windows.Forms.Button();
+            this.PatientFormValidator = new System.Windows.Forms.ErrorProvider(this.components);
+            this.HealthCardLabel = new System.Windows.Forms.Label();
+            ((System.ComponentModel.ISupportInitialize)(this.PatientFormValidator)).BeginInit();
             this.SuspendLayout();
             // 
-            // addNewPatientLbl
+            // AddPatientTitle
             // 
-            this.addNewPatientLbl.AutoSize = true;
-            this.addNewPatientLbl.Font = new System.Drawing.Font("Segoe UI", 24F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.addNewPatientLbl.Location = new System.Drawing.Point(206, 11);
-            this.addNewPatientLbl.Name = "addNewPatientLbl";
-            this.addNewPatientLbl.Size = new System.Drawing.Size(186, 45);
-            this.addNewPatientLbl.TabIndex = 3;
-            this.addNewPatientLbl.Text = "Add Patient";
+            this.AddPatientTitle.AutoSize = true;
+            this.AddPatientTitle.Font = new System.Drawing.Font("Segoe UI", 24F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.AddPatientTitle.Location = new System.Drawing.Point(206, 11);
+            this.AddPatientTitle.Name = "AddPatientTitle";
+            this.AddPatientTitle.Size = new System.Drawing.Size(186, 45);
+            this.AddPatientTitle.TabIndex = 3;
+            this.AddPatientTitle.Text = "Add Patient";
             // 
-            // FirstName
+            // FirstNameText
             // 
-            this.FirstName.Location = new System.Drawing.Point(236, 72);
-            this.FirstName.Multiline = true;
-            this.FirstName.Name = "FirstName";
-            this.FirstName.Size = new System.Drawing.Size(234, 20);
-            this.FirstName.TabIndex = 4;
-            this.FirstName.Validating += new System.ComponentModel.CancelEventHandler(this.FirstName_Validating);
+            this.FirstNameText.Location = new System.Drawing.Point(236, 72);
+            this.FirstNameText.Multiline = true;
+            this.FirstNameText.Name = "FirstNameText";
+            this.FirstNameText.Size = new System.Drawing.Size(234, 20);
+            this.FirstNameText.TabIndex = 4;
+            this.FirstNameText.Validating += new System.ComponentModel.CancelEventHandler(this.FirstName_Validating);
             // 
-            // LastName
+            // LastNameText
             // 
-            this.LastName.Location = new System.Drawing.Point(236, 98);
-            this.LastName.Multiline = true;
-            this.LastName.Name = "LastName";
-            this.LastName.Size = new System.Drawing.Size(234, 20);
-            this.LastName.TabIndex = 5;
-            this.LastName.Validating += new System.ComponentModel.CancelEventHandler(this.LastName_Validating);
+            this.LastNameText.Location = new System.Drawing.Point(236, 98);
+            this.LastNameText.Multiline = true;
+            this.LastNameText.Name = "LastNameText";
+            this.LastNameText.Size = new System.Drawing.Size(234, 20);
+            this.LastNameText.TabIndex = 5;
+            this.LastNameText.Validating += new System.ComponentModel.CancelEventHandler(this.LastName_Validating);
             // 
-            // Address
+            // AddressText
             // 
-            this.Address.Location = new System.Drawing.Point(236, 124);
-            this.Address.Multiline = true;
-            this.Address.Name = "Address";
-            this.Address.Size = new System.Drawing.Size(234, 20);
-            this.Address.TabIndex = 6;
-            this.Address.Validating += new System.ComponentModel.CancelEventHandler(this.Address_Validating);
+            this.AddressText.Location = new System.Drawing.Point(236, 124);
+            this.AddressText.Multiline = true;
+            this.AddressText.Name = "AddressText";
+            this.AddressText.Size = new System.Drawing.Size(234, 20);
+            this.AddressText.TabIndex = 6;
+            this.AddressText.Validating += new System.ComponentModel.CancelEventHandler(this.Address_Validating);
             // 
-            // ConsultingDoctor
+            // ConsultingDoctorText
             // 
-            this.ConsultingDoctor.Location = new System.Drawing.Point(236, 176);
-            this.ConsultingDoctor.Multiline = true;
-            this.ConsultingDoctor.Name = "ConsultingDoctor";
-            this.ConsultingDoctor.Size = new System.Drawing.Size(234, 20);
-            this.ConsultingDoctor.TabIndex = 8;
-            this.ConsultingDoctor.Validating += new System.ComponentModel.CancelEventHandler(this.ConsultingDoctor_Validating);
+            this.ConsultingDoctorText.Location = new System.Drawing.Point(236, 176);
+            this.ConsultingDoctorText.Multiline = true;
+            this.ConsultingDoctorText.Name = "ConsultingDoctorText";
+            this.ConsultingDoctorText.Size = new System.Drawing.Size(234, 20);
+            this.ConsultingDoctorText.TabIndex = 8;
+            this.ConsultingDoctorText.Validating += new System.ComponentModel.CancelEventHandler(this.ConsultingDoctor_Validating);
             // 
-            // Ward
+            // WardText
             // 
-            this.Ward.Location = new System.Drawing.Point(236, 202);
-            this.Ward.Multiline = true;
-            this.Ward.Name = "Ward";
-            this.Ward.Size = new System.Drawing.Size(234, 20);
-            this.Ward.TabIndex = 9;
-            this.Ward.Validating += new System.ComponentModel.CancelEventHandler(this.Ward_Validating);
+            this.WardText.Location = new System.Drawing.Point(236, 202);
+            this.WardText.Multiline = true;
+            this.WardText.Name = "WardText";
+            this.WardText.Size = new System.Drawing.Size(234, 20);
+            this.WardText.TabIndex = 9;
+            this.WardText.Validating += new System.ComponentModel.CancelEventHandler(this.Ward_Validating);
             // 
-            // RoomNo
+            // RoomNoText
             // 
-            this.RoomNo.Location = new System.Drawing.Point(236, 228);
-            this.RoomNo.Multiline = true;
-            this.RoomNo.Name = "RoomNo";
-            this.RoomNo.Size = new System.Drawing.Size(60, 20);
-            this.RoomNo.TabIndex = 10;
-            this.RoomNo.Validating += new System.ComponentModel.CancelEventHandler(this.RoomNo_Validating);
+            this.RoomNoText.Location = new System.Drawing.Point(236, 228);
+            this.RoomNoText.Multiline = true;
+            this.RoomNoText.Name = "RoomNoText";
+            this.RoomNoText.Size = new System.Drawing.Size(60, 20);
+            this.RoomNoText.TabIndex = 10;
+            this.RoomNoText.Validating += new System.ComponentModel.CancelEventHandler(this.RoomNo_Validating);
             // 
-            // BedNo
+            // BedNoText
             // 
-            this.BedNo.Location = new System.Drawing.Point(236, 254);
-            this.BedNo.Multiline = true;
-            this.BedNo.Name = "BedNo";
-            this.BedNo.Size = new System.Drawing.Size(60, 20);
-            this.BedNo.TabIndex = 11;
-            this.BedNo.Validating += new System.ComponentModel.CancelEventHandler(this.BedNo_Validating);
+            this.BedNoText.Location = new System.Drawing.Point(236, 254);
+            this.BedNoText.Multiline = true;
+            this.BedNoText.Name = "BedNoText";
+            this.BedNoText.Size = new System.Drawing.Size(60, 20);
+            this.BedNoText.TabIndex = 11;
+            this.BedNoText.Validating += new System.ComponentModel.CancelEventHandler(this.BedNo_Validating);
             // 
-            // patientFNameLabel
+            // FirstNameLabel
             // 
-            this.patientFNameLabel.AutoSize = true;
-            this.patientFNameLabel.Font = new System.Drawing.Font("Segoe UI", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.patientFNameLabel.Location = new System.Drawing.Point(128, 75);
-            this.patientFNameLabel.Name = "patientFNameLabel";
-            this.patientFNameLabel.Size = new System.Drawing.Size(61, 13);
-            this.patientFNameLabel.TabIndex = 14;
-            this.patientFNameLabel.Text = "First Name";
+            this.FirstNameLabel.AutoSize = true;
+            this.FirstNameLabel.Font = new System.Drawing.Font("Segoe UI", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.FirstNameLabel.Location = new System.Drawing.Point(128, 75);
+            this.FirstNameLabel.Name = "FirstNameLabel";
+            this.FirstNameLabel.Size = new System.Drawing.Size(61, 13);
+            this.FirstNameLabel.TabIndex = 14;
+            this.FirstNameLabel.Text = "First Name";
             // 
-            // patientLNameLabel
+            // LastNameLabel
             // 
-            this.patientLNameLabel.AutoSize = true;
-            this.patientLNameLabel.Font = new System.Drawing.Font("Segoe UI", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.patientLNameLabel.Location = new System.Drawing.Point(128, 101);
-            this.patientLNameLabel.Name = "patientLNameLabel";
-            this.patientLNameLabel.Size = new System.Drawing.Size(59, 13);
-            this.patientLNameLabel.TabIndex = 15;
-            this.patientLNameLabel.Text = "Last Name";
+            this.LastNameLabel.AutoSize = true;
+            this.LastNameLabel.Font = new System.Drawing.Font("Segoe UI", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.LastNameLabel.Location = new System.Drawing.Point(128, 101);
+            this.LastNameLabel.Name = "LastNameLabel";
+            this.LastNameLabel.Size = new System.Drawing.Size(59, 13);
+            this.LastNameLabel.TabIndex = 15;
+            this.LastNameLabel.Text = "Last Name";
             // 
-            // patientAddressLabel
+            // AddressLabel
             // 
-            this.patientAddressLabel.AutoSize = true;
-            this.patientAddressLabel.Font = new System.Drawing.Font("Segoe UI", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.patientAddressLabel.Location = new System.Drawing.Point(128, 127);
-            this.patientAddressLabel.Name = "patientAddressLabel";
-            this.patientAddressLabel.Size = new System.Drawing.Size(81, 13);
-            this.patientAddressLabel.TabIndex = 16;
-            this.patientAddressLabel.Text = "Home Address";
+            this.AddressLabel.AutoSize = true;
+            this.AddressLabel.Font = new System.Drawing.Font("Segoe UI", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.AddressLabel.Location = new System.Drawing.Point(128, 127);
+            this.AddressLabel.Name = "AddressLabel";
+            this.AddressLabel.Size = new System.Drawing.Size(81, 13);
+            this.AddressLabel.TabIndex = 16;
+            this.AddressLabel.Text = "Home Address";
             // 
-            // patientGenderLabel
+            // GenderLabel
             // 
-            this.patientGenderLabel.AutoSize = true;
-            this.patientGenderLabel.Font = new System.Drawing.Font("Segoe UI", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.patientGenderLabel.Location = new System.Drawing.Point(128, 153);
-            this.patientGenderLabel.Name = "patientGenderLabel";
-            this.patientGenderLabel.Size = new System.Drawing.Size(45, 13);
-            this.patientGenderLabel.TabIndex = 17;
-            this.patientGenderLabel.Text = "Gender";
+            this.GenderLabel.AutoSize = true;
+            this.GenderLabel.Font = new System.Drawing.Font("Segoe UI", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.GenderLabel.Location = new System.Drawing.Point(128, 153);
+            this.GenderLabel.Name = "GenderLabel";
+            this.GenderLabel.Size = new System.Drawing.Size(45, 13);
+            this.GenderLabel.TabIndex = 17;
+            this.GenderLabel.Text = "Gender";
             // 
-            // consDocLabel
+            // ConsultingDocLabel
             // 
-            this.consDocLabel.AutoSize = true;
-            this.consDocLabel.Font = new System.Drawing.Font("Segoe UI", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.consDocLabel.Location = new System.Drawing.Point(128, 179);
-            this.consDocLabel.Name = "consDocLabel";
-            this.consDocLabel.Size = new System.Drawing.Size(102, 13);
-            this.consDocLabel.TabIndex = 18;
-            this.consDocLabel.Text = "Consulting Doctor";
+            this.ConsultingDocLabel.AutoSize = true;
+            this.ConsultingDocLabel.Font = new System.Drawing.Font("Segoe UI", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.ConsultingDocLabel.Location = new System.Drawing.Point(128, 179);
+            this.ConsultingDocLabel.Name = "ConsultingDocLabel";
+            this.ConsultingDocLabel.Size = new System.Drawing.Size(102, 13);
+            this.ConsultingDocLabel.TabIndex = 18;
+            this.ConsultingDocLabel.Text = "Consulting Doctor";
             // 
-            // wardLabel
+            // WardLabel
             // 
-            this.wardLabel.AutoSize = true;
-            this.wardLabel.Font = new System.Drawing.Font("Segoe UI", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.wardLabel.Location = new System.Drawing.Point(128, 205);
-            this.wardLabel.Name = "wardLabel";
-            this.wardLabel.Size = new System.Drawing.Size(35, 13);
-            this.wardLabel.TabIndex = 19;
-            this.wardLabel.Text = "Ward";
+            this.WardLabel.AutoSize = true;
+            this.WardLabel.Font = new System.Drawing.Font("Segoe UI", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.WardLabel.Location = new System.Drawing.Point(128, 205);
+            this.WardLabel.Name = "WardLabel";
+            this.WardLabel.Size = new System.Drawing.Size(35, 13);
+            this.WardLabel.TabIndex = 19;
+            this.WardLabel.Text = "Ward";
             // 
-            // roomNoLabel
+            // RoomNoLabel
             // 
-            this.roomNoLabel.AutoSize = true;
-            this.roomNoLabel.Font = new System.Drawing.Font("Segoe UI", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.roomNoLabel.Location = new System.Drawing.Point(128, 231);
-            this.roomNoLabel.Name = "roomNoLabel";
-            this.roomNoLabel.Size = new System.Drawing.Size(58, 13);
-            this.roomNoLabel.TabIndex = 20;
-            this.roomNoLabel.Text = "Room No.";
+            this.RoomNoLabel.AutoSize = true;
+            this.RoomNoLabel.Font = new System.Drawing.Font("Segoe UI", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.RoomNoLabel.Location = new System.Drawing.Point(128, 231);
+            this.RoomNoLabel.Name = "RoomNoLabel";
+            this.RoomNoLabel.Size = new System.Drawing.Size(58, 13);
+            this.RoomNoLabel.TabIndex = 20;
+            this.RoomNoLabel.Text = "Room No.";
             // 
-            // bedNoLabel
+            // BedNoLabel
             // 
-            this.bedNoLabel.AutoSize = true;
-            this.bedNoLabel.Font = new System.Drawing.Font("Segoe UI", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.bedNoLabel.Location = new System.Drawing.Point(128, 257);
-            this.bedNoLabel.Name = "bedNoLabel";
-            this.bedNoLabel.Size = new System.Drawing.Size(48, 13);
-            this.bedNoLabel.TabIndex = 21;
-            this.bedNoLabel.Text = "Bed No.";
+            this.BedNoLabel.AutoSize = true;
+            this.BedNoLabel.Font = new System.Drawing.Font("Segoe UI", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.BedNoLabel.Location = new System.Drawing.Point(128, 257);
+            this.BedNoLabel.Name = "BedNoLabel";
+            this.BedNoLabel.Size = new System.Drawing.Size(48, 13);
+            this.BedNoLabel.TabIndex = 21;
+            this.BedNoLabel.Text = "Bed No.";
             // 
-            // hasHealthCardLabel
+            // HasHealthCardLabel
             // 
-            this.hasHealthCardLabel.AutoSize = true;
-            this.hasHealthCardLabel.Font = new System.Drawing.Font("Segoe UI", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.hasHealthCardLabel.Location = new System.Drawing.Point(128, 283);
-            this.hasHealthCardLabel.Name = "hasHealthCardLabel";
-            this.hasHealthCardLabel.Size = new System.Drawing.Size(90, 13);
-            this.hasHealthCardLabel.TabIndex = 22;
-            this.hasHealthCardLabel.Text = "Has Health Card";
+            this.HasHealthCardLabel.AutoSize = true;
+            this.HasHealthCardLabel.Font = new System.Drawing.Font("Segoe UI", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.HasHealthCardLabel.Location = new System.Drawing.Point(128, 283);
+            this.HasHealthCardLabel.Name = "HasHealthCardLabel";
+            this.HasHealthCardLabel.Size = new System.Drawing.Size(90, 13);
+            this.HasHealthCardLabel.TabIndex = 22;
+            this.HasHealthCardLabel.Text = "Has Health Card";
             // 
             // YesCheckBox
             // 
@@ -244,83 +244,83 @@
             this.GenderComboBox.TabIndex = 26;
             this.GenderComboBox.SelectedIndexChanged += new System.EventHandler(this.GenderComboBox_SelectedIndexChanged);
             // 
-            // savePatientBtn
+            // SavePatientButton
             // 
-            this.savePatientBtn.Location = new System.Drawing.Point(141, 315);
-            this.savePatientBtn.Name = "savePatientBtn";
-            this.savePatientBtn.Size = new System.Drawing.Size(99, 35);
-            this.savePatientBtn.TabIndex = 27;
-            this.savePatientBtn.Text = "Save";
-            this.savePatientBtn.UseVisualStyleBackColor = true;
-            this.savePatientBtn.Click += new System.EventHandler(this.SavePatientBtn_Click);
+            this.SavePatientButton.Location = new System.Drawing.Point(153, 315);
+            this.SavePatientButton.Name = "SavePatientButton";
+            this.SavePatientButton.Size = new System.Drawing.Size(99, 35);
+            this.SavePatientButton.TabIndex = 27;
+            this.SavePatientButton.Text = "Save";
+            this.SavePatientButton.UseVisualStyleBackColor = true;
+            this.SavePatientButton.Click += new System.EventHandler(this.SavePatientBtn_Click);
             // 
-            // ReturnBtn
+            // ReturnButton
             // 
-            this.ReturnBtn.Location = new System.Drawing.Point(381, 315);
-            this.ReturnBtn.Name = "ReturnBtn";
-            this.ReturnBtn.Size = new System.Drawing.Size(99, 35);
-            this.ReturnBtn.TabIndex = 28;
-            this.ReturnBtn.Text = "Return";
-            this.ReturnBtn.UseVisualStyleBackColor = true;
-            this.ReturnBtn.Click += new System.EventHandler(this.ReturnBtn_Click);
+            this.ReturnButton.Location = new System.Drawing.Point(363, 315);
+            this.ReturnButton.Name = "ReturnButton";
+            this.ReturnButton.Size = new System.Drawing.Size(99, 35);
+            this.ReturnButton.TabIndex = 28;
+            this.ReturnButton.Text = "Return";
+            this.ReturnButton.UseVisualStyleBackColor = true;
+            this.ReturnButton.Click += new System.EventHandler(this.ReturnBtn_Click);
             // 
-            // ClearAll
+            // ClearAllButton
             // 
-            this.ClearAll.Location = new System.Drawing.Point(258, 315);
-            this.ClearAll.Name = "ClearAll";
-            this.ClearAll.Size = new System.Drawing.Size(99, 35);
-            this.ClearAll.TabIndex = 29;
-            this.ClearAll.Text = "Clear All";
-            this.ClearAll.UseVisualStyleBackColor = true;
-            this.ClearAll.Click += new System.EventHandler(this.ClearAll_Click);
+            this.ClearAllButton.Location = new System.Drawing.Point(258, 315);
+            this.ClearAllButton.Name = "ClearAllButton";
+            this.ClearAllButton.Size = new System.Drawing.Size(99, 35);
+            this.ClearAllButton.TabIndex = 29;
+            this.ClearAllButton.Text = "Clear All";
+            this.ClearAllButton.UseVisualStyleBackColor = true;
+            this.ClearAllButton.Click += new System.EventHandler(this.ClearAll_Click);
             // 
-            // patientFormValidator
+            // PatientFormValidator
             // 
-            this.patientFormValidator.ContainerControl = this;
+            this.PatientFormValidator.ContainerControl = this;
             // 
-            // healthCardLabel
+            // HealthCardLabel
             // 
-            this.healthCardLabel.AutoSize = true;
-            this.healthCardLabel.Location = new System.Drawing.Point(283, 283);
-            this.healthCardLabel.Name = "healthCardLabel";
-            this.healthCardLabel.Size = new System.Drawing.Size(11, 13);
-            this.healthCardLabel.TabIndex = 30;
-            this.healthCardLabel.Text = "-";
+            this.HealthCardLabel.AutoSize = true;
+            this.HealthCardLabel.Location = new System.Drawing.Point(283, 283);
+            this.HealthCardLabel.Name = "HealthCardLabel";
+            this.HealthCardLabel.Size = new System.Drawing.Size(11, 13);
+            this.HealthCardLabel.TabIndex = 30;
+            this.HealthCardLabel.Text = "-";
             // 
-            // CreatePatient
+            // CreatePatientForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(598, 366);
-            this.Controls.Add(this.healthCardLabel);
-            this.Controls.Add(this.ClearAll);
-            this.Controls.Add(this.ReturnBtn);
-            this.Controls.Add(this.savePatientBtn);
+            this.Controls.Add(this.HealthCardLabel);
+            this.Controls.Add(this.ClearAllButton);
+            this.Controls.Add(this.ReturnButton);
+            this.Controls.Add(this.SavePatientButton);
             this.Controls.Add(this.GenderComboBox);
             this.Controls.Add(this.YesCheckBox);
-            this.Controls.Add(this.hasHealthCardLabel);
-            this.Controls.Add(this.bedNoLabel);
-            this.Controls.Add(this.roomNoLabel);
-            this.Controls.Add(this.wardLabel);
-            this.Controls.Add(this.consDocLabel);
-            this.Controls.Add(this.patientGenderLabel);
-            this.Controls.Add(this.patientAddressLabel);
-            this.Controls.Add(this.patientLNameLabel);
-            this.Controls.Add(this.patientFNameLabel);
-            this.Controls.Add(this.BedNo);
-            this.Controls.Add(this.RoomNo);
-            this.Controls.Add(this.Ward);
-            this.Controls.Add(this.ConsultingDoctor);
-            this.Controls.Add(this.Address);
-            this.Controls.Add(this.LastName);
-            this.Controls.Add(this.FirstName);
-            this.Controls.Add(this.addNewPatientLbl);
+            this.Controls.Add(this.HasHealthCardLabel);
+            this.Controls.Add(this.BedNoLabel);
+            this.Controls.Add(this.RoomNoLabel);
+            this.Controls.Add(this.WardLabel);
+            this.Controls.Add(this.ConsultingDocLabel);
+            this.Controls.Add(this.GenderLabel);
+            this.Controls.Add(this.AddressLabel);
+            this.Controls.Add(this.LastNameLabel);
+            this.Controls.Add(this.FirstNameLabel);
+            this.Controls.Add(this.BedNoText);
+            this.Controls.Add(this.RoomNoText);
+            this.Controls.Add(this.WardText);
+            this.Controls.Add(this.ConsultingDoctorText);
+            this.Controls.Add(this.AddressText);
+            this.Controls.Add(this.LastNameText);
+            this.Controls.Add(this.FirstNameText);
+            this.Controls.Add(this.AddPatientTitle);
             this.Font = new System.Drawing.Font("Segoe UI", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
-            this.Name = "CreatePatient";
+            this.Name = "CreatePatientForm";
             this.Text = "Add New Patient";
-            ((System.ComponentModel.ISupportInitialize)(this.patientFormValidator)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.PatientFormValidator)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -328,29 +328,29 @@
 
         #endregion
 
-        private System.Windows.Forms.Label addNewPatientLbl;
-        private System.Windows.Forms.TextBox FirstName;
-        private System.Windows.Forms.TextBox LastName;
-        private System.Windows.Forms.TextBox Address;
-        private System.Windows.Forms.TextBox ConsultingDoctor;
-        private System.Windows.Forms.TextBox Ward;
-        private System.Windows.Forms.TextBox RoomNo;
-        private System.Windows.Forms.TextBox BedNo;
-        private System.Windows.Forms.Label patientFNameLabel;
-        private System.Windows.Forms.Label patientLNameLabel;
-        private System.Windows.Forms.Label patientAddressLabel;
-        private System.Windows.Forms.Label patientGenderLabel;
-        private System.Windows.Forms.Label consDocLabel;
-        private System.Windows.Forms.Label wardLabel;
-        private System.Windows.Forms.Label roomNoLabel;
-        private System.Windows.Forms.Label bedNoLabel;
-        private System.Windows.Forms.Label hasHealthCardLabel;
+        private System.Windows.Forms.Label AddPatientTitle;
+        private System.Windows.Forms.TextBox FirstNameText;
+        private System.Windows.Forms.TextBox LastNameText;
+        private System.Windows.Forms.TextBox AddressText;
+        private System.Windows.Forms.TextBox ConsultingDoctorText;
+        private System.Windows.Forms.TextBox WardText;
+        private System.Windows.Forms.TextBox RoomNoText;
+        private System.Windows.Forms.TextBox BedNoText;
+        private System.Windows.Forms.Label FirstNameLabel;
+        private System.Windows.Forms.Label LastNameLabel;
+        private System.Windows.Forms.Label AddressLabel;
+        private System.Windows.Forms.Label GenderLabel;
+        private System.Windows.Forms.Label ConsultingDocLabel;
+        private System.Windows.Forms.Label WardLabel;
+        private System.Windows.Forms.Label RoomNoLabel;
+        private System.Windows.Forms.Label BedNoLabel;
+        private System.Windows.Forms.Label HasHealthCardLabel;
         private System.Windows.Forms.CheckBox YesCheckBox;
         private System.Windows.Forms.ComboBox GenderComboBox;
-        private System.Windows.Forms.Button savePatientBtn;
-        private System.Windows.Forms.Button ReturnBtn;
-        private System.Windows.Forms.Button ClearAll;
-        private System.Windows.Forms.ErrorProvider patientFormValidator;
-        private System.Windows.Forms.Label healthCardLabel;
+        private System.Windows.Forms.Button SavePatientButton;
+        private System.Windows.Forms.Button ReturnButton;
+        private System.Windows.Forms.Button ClearAllButton;
+        private System.Windows.Forms.ErrorProvider PatientFormValidator;
+        private System.Windows.Forms.Label HealthCardLabel;
     }
 }

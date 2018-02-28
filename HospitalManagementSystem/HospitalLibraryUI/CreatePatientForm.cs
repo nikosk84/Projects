@@ -8,11 +8,11 @@ namespace HospitalSystemUI
 {
     //TODO - Text field validation recheck
 
-    public partial class CreatePatient : Form
+    public partial class CreatePatientForm : Form
     {
         private string errorMsg = "Check field";
 
-        public CreatePatient()
+        public CreatePatientForm()
         {
             InitializeComponent();
         }
@@ -22,19 +22,19 @@ namespace HospitalSystemUI
         /// </summary>
         private void ClearAllFields()
         {
-            FirstName.Text = "";
-            LastName.Text = "";
-            Address.Text = "";
+            FirstNameText.Text = "";
+            LastNameText.Text = "";
+            AddressText.Text = "";
             GenderComboBox.SelectedIndex = -1;
-            ConsultingDoctor.Text = "";
-            Ward.Text = "";
-            RoomNo.Text = "";
-            BedNo.Text = "";
+            ConsultingDoctorText.Text = "";
+            WardText.Text = "";
+            RoomNoText.Text = "";
+            BedNoText.Text = "";
             YesCheckBox.Checked = false;
-            patientFormValidator.Clear();
-            healthCardLabel.Text = "-";
+            PatientFormValidator.Clear();
+            HealthCardLabel.Text = "-";
 
-            FirstName.Focus();
+            FirstNameText.Focus();
         }
 
         /// <summary>
@@ -46,11 +46,11 @@ namespace HospitalSystemUI
         {
             if (YesCheckBox.Checked)
             {
-                healthCardLabel.Text = YesCheckBox.Text;
+                HealthCardLabel.Text = YesCheckBox.Text;
             }
             else
             {
-                healthCardLabel.Text = "-";
+                HealthCardLabel.Text = "-";
             }
         }
 
@@ -63,7 +63,7 @@ namespace HospitalSystemUI
         {
             if (GenderComboBox.SelectedIndex > -1)
             {
-                patientFormValidator.Clear();
+                PatientFormValidator.Clear();
             }
         }
 
@@ -74,46 +74,46 @@ namespace HospitalSystemUI
         /// <param name="e"></param>
         private void FirstName_Validating(object sender, System.ComponentModel.CancelEventArgs e)
         {
-            if (String.IsNullOrEmpty(FirstName.Text))
+            if (String.IsNullOrEmpty(FirstNameText.Text))
             {
                 e.Cancel = true;
-                this.patientFormValidator.SetError(FirstName, errorMsg);
+                this.PatientFormValidator.SetError(FirstNameText, errorMsg);
             }
         }
 
         private void LastName_Validating(object sender, System.ComponentModel.CancelEventArgs e)
         {
-            if (String.IsNullOrEmpty(LastName.Text))
+            if (String.IsNullOrEmpty(LastNameText.Text))
             {
                 e.Cancel = true;
-                this.patientFormValidator.SetError(LastName, errorMsg);
+                this.PatientFormValidator.SetError(LastNameText, errorMsg);
             }
         }
 
         private void Address_Validating(object sender, System.ComponentModel.CancelEventArgs e)
         {
-            if (String.IsNullOrEmpty(Address.Text))
+            if (String.IsNullOrEmpty(AddressText.Text))
             {
                 e.Cancel = true;
-                this.patientFormValidator.SetError(Address, errorMsg);
+                this.PatientFormValidator.SetError(AddressText, errorMsg);
             }
         }
 
         private void ConsultingDoctor_Validating(object sender, System.ComponentModel.CancelEventArgs e)
         {
-            if (String.IsNullOrEmpty(ConsultingDoctor.Text))
+            if (String.IsNullOrEmpty(ConsultingDoctorText.Text))
             {
                 e.Cancel = true;
-                this.patientFormValidator.SetError(ConsultingDoctor, errorMsg);
+                this.PatientFormValidator.SetError(ConsultingDoctorText, errorMsg);
             }
         }
 
         private void Ward_Validating(object sender, System.ComponentModel.CancelEventArgs e)
         {
-            if (String.IsNullOrEmpty(Ward.Text))
+            if (String.IsNullOrEmpty(WardText.Text))
             {
                 e.Cancel = true;
-                this.patientFormValidator.SetError(Ward, errorMsg);
+                this.PatientFormValidator.SetError(WardText, errorMsg);
             }
         }
         /// <summary>
@@ -123,10 +123,10 @@ namespace HospitalSystemUI
         /// <param name="e"></param>
         private void RoomNo_Validating(object sender, System.ComponentModel.CancelEventArgs e)
         {
-            if (String.IsNullOrEmpty(RoomNo.Text))
+            if (String.IsNullOrEmpty(RoomNoText.Text))
             {
                 e.Cancel = true;
-                this.patientFormValidator.SetError(RoomNo, errorMsg);
+                this.PatientFormValidator.SetError(RoomNoText, errorMsg);
             }
         }
         /// <summary>
@@ -136,10 +136,10 @@ namespace HospitalSystemUI
         /// <param name="e"></param>
         private void BedNo_Validating(object sender, System.ComponentModel.CancelEventArgs e)
         {
-            if (String.IsNullOrEmpty(BedNo.Text))
+            if (String.IsNullOrEmpty(BedNoText.Text))
             {
                 e.Cancel = true;
-                patientFormValidator.SetError(BedNo, errorMsg);
+                PatientFormValidator.SetError(BedNoText, errorMsg);
             }
         }
 
@@ -154,15 +154,15 @@ namespace HospitalSystemUI
 
             PatientModel patient = new PatientModel
             {
-                FirstName = FirstName.Text,
-                LastName = LastName.Text,
-                HomeAddress = Address.Text,
+                FirstName = FirstNameText.Text,
+                LastName = LastNameText.Text,
+                HomeAddress = AddressText.Text,
                 Gender = GenderComboBox.Text,
-                ConsultingDoctor = ConsultingDoctor.Text,
-                Ward = Ward.Text,
-                RoomNumber = RoomNo.Text,
-                BedNumber = BedNo.Text,
-                HasHealthCard = healthCardLabel.Text
+                ConsultingDoctor = ConsultingDoctorText.Text,
+                Ward = WardText.Text,
+                RoomNumber = RoomNoText.Text,
+                BedNumber = BedNoText.Text,
+                HasHealthCard = HealthCardLabel.Text
             };
 
             foreach (IDataConnection connection in GlobalConfiguration.Connection)
@@ -178,7 +178,6 @@ namespace HospitalSystemUI
         /// <param name="e"></param>
         private void ClearAll_Click(object sender, EventArgs e)
         {
-            patientFormValidator.Clear();
             ClearAllFields();
         }
 
@@ -189,7 +188,7 @@ namespace HospitalSystemUI
         /// <param name="e"></param>
         private void ReturnBtn_Click(object sender, EventArgs e)
         {
-            Close();
+           //To be fixed
         }
     }
 }

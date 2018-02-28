@@ -1,6 +1,6 @@
 ﻿namespace HospitalSystemUI
 {
-    partial class CreateVehicle
+    partial class CreateVehicleForm
     {
         /// <summary>
         /// Required designer variable.
@@ -28,143 +28,143 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(CreateVehicle));
-            this.createNewLbl = new System.Windows.Forms.Label();
-            this.emailTb = new System.Windows.Forms.TextBox();
-            this.addressTb = new System.Windows.Forms.TextBox();
-            this.lastNameTb = new System.Windows.Forms.TextBox();
-            this.firstNameTb = new System.Windows.Forms.TextBox();
-            this.nextServiceLbl = new System.Windows.Forms.Label();
-            this.lastServiceLbl = new System.Windows.Forms.Label();
-            this.licencePlateLbl = new System.Windows.Forms.Label();
-            this.vehicleMakeLbl = new System.Windows.Forms.Label();
-            this.saveVehicleBtn = new System.Windows.Forms.Button();
-            this.returnBtn = new System.Windows.Forms.Button();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(CreateVehicleForm));
+            this.CreateVehicleTitle = new System.Windows.Forms.Label();
+            this.NextServiceText = new System.Windows.Forms.TextBox();
+            this.LastServiceText = new System.Windows.Forms.TextBox();
+            this.LicencePlateText = new System.Windows.Forms.TextBox();
+            this.MakeText = new System.Windows.Forms.TextBox();
+            this.NextServiceLabel = new System.Windows.Forms.Label();
+            this.LastServiceLabel = new System.Windows.Forms.Label();
+            this.LicencePlateLabel = new System.Windows.Forms.Label();
+            this.MakeLabel = new System.Windows.Forms.Label();
+            this.SaveVehicleButton = new System.Windows.Forms.Button();
+            this.ReturnButton = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
-            // createNewLbl
+            // CreateVehicleTitle
             // 
-            this.createNewLbl.AutoSize = true;
-            this.createNewLbl.Font = new System.Drawing.Font("Segoe UI", 24F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.createNewLbl.Location = new System.Drawing.Point(162, 9);
-            this.createNewLbl.Name = "createNewLbl";
-            this.createNewLbl.Size = new System.Drawing.Size(222, 45);
-            this.createNewLbl.TabIndex = 2;
-            this.createNewLbl.Text = "Create Vehicle";
+            this.CreateVehicleTitle.AutoSize = true;
+            this.CreateVehicleTitle.Font = new System.Drawing.Font("Segoe UI", 24F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.CreateVehicleTitle.Location = new System.Drawing.Point(166, 9);
+            this.CreateVehicleTitle.Name = "CreateVehicleTitle";
+            this.CreateVehicleTitle.Size = new System.Drawing.Size(222, 45);
+            this.CreateVehicleTitle.TabIndex = 2;
+            this.CreateVehicleTitle.Text = "Create Vehicle";
             // 
-            // emailTb
+            // NextServiceText
             // 
-            this.emailTb.Location = new System.Drawing.Point(227, 179);
-            this.emailTb.Multiline = true;
-            this.emailTb.Name = "emailTb";
-            this.emailTb.Size = new System.Drawing.Size(157, 20);
-            this.emailTb.TabIndex = 34;
+            this.NextServiceText.Location = new System.Drawing.Point(231, 179);
+            this.NextServiceText.Multiline = true;
+            this.NextServiceText.Name = "NextServiceText";
+            this.NextServiceText.Size = new System.Drawing.Size(157, 20);
+            this.NextServiceText.TabIndex = 34;
             // 
-            // addressTb
+            // LastServiceText
             // 
-            this.addressTb.Location = new System.Drawing.Point(227, 153);
-            this.addressTb.Multiline = true;
-            this.addressTb.Name = "addressTb";
-            this.addressTb.Size = new System.Drawing.Size(157, 20);
-            this.addressTb.TabIndex = 33;
+            this.LastServiceText.Location = new System.Drawing.Point(231, 153);
+            this.LastServiceText.Multiline = true;
+            this.LastServiceText.Name = "LastServiceText";
+            this.LastServiceText.Size = new System.Drawing.Size(157, 20);
+            this.LastServiceText.TabIndex = 33;
             // 
-            // lastNameTb
+            // LicencePlateText
             // 
-            this.lastNameTb.Location = new System.Drawing.Point(227, 127);
-            this.lastNameTb.Multiline = true;
-            this.lastNameTb.Name = "lastNameTb";
-            this.lastNameTb.Size = new System.Drawing.Size(157, 20);
-            this.lastNameTb.TabIndex = 32;
+            this.LicencePlateText.Location = new System.Drawing.Point(231, 127);
+            this.LicencePlateText.Multiline = true;
+            this.LicencePlateText.Name = "LicencePlateText";
+            this.LicencePlateText.Size = new System.Drawing.Size(157, 20);
+            this.LicencePlateText.TabIndex = 32;
             // 
-            // firstNameTb
+            // MakeText
             // 
-            this.firstNameTb.Location = new System.Drawing.Point(227, 99);
-            this.firstNameTb.Multiline = true;
-            this.firstNameTb.Name = "firstNameTb";
-            this.firstNameTb.Size = new System.Drawing.Size(157, 20);
-            this.firstNameTb.TabIndex = 31;
+            this.MakeText.Location = new System.Drawing.Point(231, 99);
+            this.MakeText.Multiline = true;
+            this.MakeText.Name = "MakeText";
+            this.MakeText.Size = new System.Drawing.Size(157, 20);
+            this.MakeText.TabIndex = 31;
             // 
-            // nextServiceLbl
+            // NextServiceLabel
             // 
-            this.nextServiceLbl.AutoSize = true;
-            this.nextServiceLbl.Font = new System.Drawing.Font("Segoe UI Semibold", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.nextServiceLbl.Location = new System.Drawing.Point(149, 179);
-            this.nextServiceLbl.Name = "nextServiceLbl";
-            this.nextServiceLbl.Size = new System.Drawing.Size(70, 13);
-            this.nextServiceLbl.TabIndex = 29;
-            this.nextServiceLbl.Text = "Next Service";
+            this.NextServiceLabel.AutoSize = true;
+            this.NextServiceLabel.Font = new System.Drawing.Font("Segoe UI Semibold", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.NextServiceLabel.Location = new System.Drawing.Point(153, 179);
+            this.NextServiceLabel.Name = "NextServiceLabel";
+            this.NextServiceLabel.Size = new System.Drawing.Size(70, 13);
+            this.NextServiceLabel.TabIndex = 29;
+            this.NextServiceLabel.Text = "Next Service";
             // 
-            // lastServiceLbl
+            // LastServiceLabel
             // 
-            this.lastServiceLbl.AutoSize = true;
-            this.lastServiceLbl.Font = new System.Drawing.Font("Segoe UI Semibold", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lastServiceLbl.Location = new System.Drawing.Point(149, 153);
-            this.lastServiceLbl.Name = "lastServiceLbl";
-            this.lastServiceLbl.Size = new System.Drawing.Size(66, 13);
-            this.lastServiceLbl.TabIndex = 28;
-            this.lastServiceLbl.Text = "Last Service";
+            this.LastServiceLabel.AutoSize = true;
+            this.LastServiceLabel.Font = new System.Drawing.Font("Segoe UI Semibold", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.LastServiceLabel.Location = new System.Drawing.Point(153, 153);
+            this.LastServiceLabel.Name = "LastServiceLabel";
+            this.LastServiceLabel.Size = new System.Drawing.Size(66, 13);
+            this.LastServiceLabel.TabIndex = 28;
+            this.LastServiceLabel.Text = "Last Service";
             // 
-            // licencePlateLbl
+            // LicencePlateLabel
             // 
-            this.licencePlateLbl.AutoSize = true;
-            this.licencePlateLbl.Font = new System.Drawing.Font("Segoe UI Semibold", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.licencePlateLbl.Location = new System.Drawing.Point(149, 127);
-            this.licencePlateLbl.Name = "licencePlateLbl";
-            this.licencePlateLbl.Size = new System.Drawing.Size(71, 13);
-            this.licencePlateLbl.TabIndex = 27;
-            this.licencePlateLbl.Text = "Licence Plate";
+            this.LicencePlateLabel.AutoSize = true;
+            this.LicencePlateLabel.Font = new System.Drawing.Font("Segoe UI Semibold", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.LicencePlateLabel.Location = new System.Drawing.Point(153, 127);
+            this.LicencePlateLabel.Name = "LicencePlateLabel";
+            this.LicencePlateLabel.Size = new System.Drawing.Size(71, 13);
+            this.LicencePlateLabel.TabIndex = 27;
+            this.LicencePlateLabel.Text = "Licence Plate";
             // 
-            // vehicleMakeLbl
+            // MakeLabel
             // 
-            this.vehicleMakeLbl.AutoSize = true;
-            this.vehicleMakeLbl.Font = new System.Drawing.Font("Segoe UI Semibold", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.vehicleMakeLbl.Location = new System.Drawing.Point(149, 99);
-            this.vehicleMakeLbl.Name = "vehicleMakeLbl";
-            this.vehicleMakeLbl.Size = new System.Drawing.Size(35, 13);
-            this.vehicleMakeLbl.TabIndex = 26;
-            this.vehicleMakeLbl.Text = "Make";
+            this.MakeLabel.AutoSize = true;
+            this.MakeLabel.Font = new System.Drawing.Font("Segoe UI Semibold", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.MakeLabel.Location = new System.Drawing.Point(153, 99);
+            this.MakeLabel.Name = "MakeLabel";
+            this.MakeLabel.Size = new System.Drawing.Size(35, 13);
+            this.MakeLabel.TabIndex = 26;
+            this.MakeLabel.Text = "Make";
             // 
-            // saveVehicleBtn
+            // SaveVehicleButton
             // 
-            this.saveVehicleBtn.Font = new System.Drawing.Font("Segoe UI Semibold", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.saveVehicleBtn.Location = new System.Drawing.Point(227, 218);
-            this.saveVehicleBtn.Name = "saveVehicleBtn";
-            this.saveVehicleBtn.Size = new System.Drawing.Size(91, 40);
-            this.saveVehicleBtn.TabIndex = 35;
-            this.saveVehicleBtn.Text = "Save Vehicle";
-            this.saveVehicleBtn.UseVisualStyleBackColor = true;
-            this.saveVehicleBtn.Click += new System.EventHandler(this.SaveVehicleBtn_Click);
+            this.SaveVehicleButton.Font = new System.Drawing.Font("Segoe UI Semibold", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.SaveVehicleButton.Location = new System.Drawing.Point(156, 216);
+            this.SaveVehicleButton.Name = "SaveVehicleButton";
+            this.SaveVehicleButton.Size = new System.Drawing.Size(91, 40);
+            this.SaveVehicleButton.TabIndex = 35;
+            this.SaveVehicleButton.Text = "Save Vehicle";
+            this.SaveVehicleButton.UseVisualStyleBackColor = true;
+            this.SaveVehicleButton.Click += new System.EventHandler(this.SaveVehicleBtn_Click);
             // 
-            // returnBtn
+            // ReturnButton
             // 
-            this.returnBtn.Font = new System.Drawing.Font("Segoe UI Semibold", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.returnBtn.Location = new System.Drawing.Point(438, 274);
-            this.returnBtn.Name = "returnBtn";
-            this.returnBtn.Size = new System.Drawing.Size(91, 40);
-            this.returnBtn.TabIndex = 36;
-            this.returnBtn.Text = "Return";
-            this.returnBtn.UseVisualStyleBackColor = true;
-            this.returnBtn.Click += new System.EventHandler(this.ReturnBtn_Click);
+            this.ReturnButton.Font = new System.Drawing.Font("Segoe UI Semibold", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.ReturnButton.Location = new System.Drawing.Point(297, 216);
+            this.ReturnButton.Name = "ReturnButton";
+            this.ReturnButton.Size = new System.Drawing.Size(91, 40);
+            this.ReturnButton.TabIndex = 36;
+            this.ReturnButton.Text = "Return";
+            this.ReturnButton.UseVisualStyleBackColor = true;
+            this.ReturnButton.Click += new System.EventHandler(this.ReturnBtn_Click);
             // 
-            // CreateVehicle
+            // CreateVehicleForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
-            this.ClientSize = new System.Drawing.Size(541, 326);
-            this.Controls.Add(this.returnBtn);
-            this.Controls.Add(this.saveVehicleBtn);
-            this.Controls.Add(this.emailTb);
-            this.Controls.Add(this.addressTb);
-            this.Controls.Add(this.lastNameTb);
-            this.Controls.Add(this.firstNameTb);
-            this.Controls.Add(this.nextServiceLbl);
-            this.Controls.Add(this.lastServiceLbl);
-            this.Controls.Add(this.licencePlateLbl);
-            this.Controls.Add(this.vehicleMakeLbl);
-            this.Controls.Add(this.createNewLbl);
+            this.ClientSize = new System.Drawing.Size(541, 288);
+            this.Controls.Add(this.ReturnButton);
+            this.Controls.Add(this.SaveVehicleButton);
+            this.Controls.Add(this.NextServiceText);
+            this.Controls.Add(this.LastServiceText);
+            this.Controls.Add(this.LicencePlateText);
+            this.Controls.Add(this.MakeText);
+            this.Controls.Add(this.NextServiceLabel);
+            this.Controls.Add(this.LastServiceLabel);
+            this.Controls.Add(this.LicencePlateLabel);
+            this.Controls.Add(this.MakeLabel);
+            this.Controls.Add(this.CreateVehicleTitle);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
-            this.Name = "CreateVehicle";
+            this.Name = "CreateVehicleForm";
             this.Text = "Create Vehicle";
             this.Load += new System.EventHandler(this.CreateVehicle_Load);
             this.ResumeLayout(false);
@@ -174,16 +174,16 @@
 
         #endregion
 
-        private System.Windows.Forms.Label createNewLbl;
-        private System.Windows.Forms.TextBox emailTb;
-        private System.Windows.Forms.TextBox addressTb;
-        private System.Windows.Forms.TextBox lastNameTb;
-        private System.Windows.Forms.TextBox firstNameTb;
-        private System.Windows.Forms.Label nextServiceLbl;
-        private System.Windows.Forms.Label lastServiceLbl;
-        private System.Windows.Forms.Label licencePlateLbl;
-        private System.Windows.Forms.Label vehicleMakeLbl;
-        private System.Windows.Forms.Button saveVehicleBtn;
-        private System.Windows.Forms.Button returnBtn;
+        private System.Windows.Forms.Label CreateVehicleTitle;
+        private System.Windows.Forms.TextBox NextServiceText;
+        private System.Windows.Forms.TextBox LastServiceText;
+        private System.Windows.Forms.TextBox LicencePlateText;
+        private System.Windows.Forms.TextBox MakeText;
+        private System.Windows.Forms.Label NextServiceLabel;
+        private System.Windows.Forms.Label LastServiceLabel;
+        private System.Windows.Forms.Label LicencePlateLabel;
+        private System.Windows.Forms.Label MakeLabel;
+        private System.Windows.Forms.Button SaveVehicleButton;
+        private System.Windows.Forms.Button ReturnButton;
     }
 }

@@ -7,6 +7,7 @@ namespace HospitalSystemUI
     {
         /// <summary>
         /// The main entry point for the application.
+        /// Initializes the Global Connection
         /// </summary>
         [STAThread]
         static void Main()
@@ -14,9 +15,8 @@ namespace HospitalSystemUI
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
             
-            //Initialize connection
             HospitalLibrary.DataAccess.GlobalConfiguration.InitializeConnections(true);
-            Application.Run(new MainLogin());
+            Application.Run(new MainLoginForm());
         }
     }
 }

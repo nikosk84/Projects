@@ -1,45 +1,50 @@
 ﻿using HospitalLibrary.DataAccess;
-using HospitalLibrary.Models;
 using System;
 using System.Windows.Forms;
 
 namespace HospitalSystemUI
 {
-    public partial class MainLogin : Form
+    public partial class MainLoginForm : Form
     {
-        public MainLogin()
+        public MainLoginForm()
         {
             InitializeComponent();
         }
 
         private void UserNameTb_TextChanged(object sender, EventArgs e)
         {
-            userNameTb.MaxLength = 10;
-            userNameTb.CharacterCasing = CharacterCasing.Lower;
-            userNameTb.TextAlign = HorizontalAlignment.Center;
+            UserNameText.MaxLength = 10;
+            UserNameText.CharacterCasing = CharacterCasing.Lower;
+            UserNameText.TextAlign = HorizontalAlignment.Center;
         }
 
         private void PasswordTb_TextChanged(object sender, EventArgs e)
         {
-            passwordTb.MaxLength = 20;
-            passwordTb.CharacterCasing = CharacterCasing.Lower;
-            passwordTb.TextAlign = HorizontalAlignment.Center;
+            PasswordText.MaxLength = 20;
+            PasswordText.CharacterCasing = CharacterCasing.Lower;
+            PasswordText.TextAlign = HorizontalAlignment.Center;
+        }
+
+        private void MainLogin_FormClosing(object sender, FormClosingEventArgs e)
+        {
+            Application.Exit();
         }
 
         private void LoginBtn_Click_1(object sender, EventArgs e)
         {
-            //Not working
+            SqlConnector sql = new SqlConnector();
 
-            SysUserModel sysUser = new SysUserModel
+            if (String.IsNullOrEmpty(UserNameText.Text))
             {
-                UserName = userNameTb.Text, Password = passwordTb.Text
-            };
-
-            foreach (IDataConnection connect in GlobalConfiguration.Connection)
-            {
-                connect.LogOn(sysUser);
+                MessageBox.Show("Please enter credentials", "Login", MessageBoxButtons.OK, MessageBoxIcon.Warning);
             }
-
+            else
+            {
+                sql.LogOn(UserNameText.Text, PasswordText.Text);
+                MainMenuForm mainMenu = new MainMenuForm();
+                mainMenu.Show();
+                Hide();
+            }
         }
     }
 }

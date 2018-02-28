@@ -3,47 +3,47 @@ using System.Windows.Forms;
 
 namespace HospitalSystemUI
 {
-    public partial class MainMenu : Form
+    public partial class MainMenuForm : Form
     {
-        public MainMenu()
+        public MainMenuForm()
         {
             InitializeComponent();
         }
 
         private void CreateMaintenanceStaffBtn_Click(object sender, EventArgs e)
         {
-            CreateEmployee newForm = new CreateEmployee();
+            CreateEmployeeForm newForm = new CreateEmployeeForm();
             newForm.Show();
         }
 
         private void CreatePatientBtn_Click(object sender, EventArgs e)
         {
-            CreatePatient createPatient = new CreatePatient();
+            CreatePatientForm createPatient = new CreatePatientForm();
             createPatient.Show();
         }
 
         private void FindStaffMenuBtn_Click(object sender, EventArgs e)
         {
-            FindStaff findRecord = new FindStaff();
+            FindStaffForm findRecord = new FindStaffForm();
             findRecord.Show();
         }
 
         private void AddVehicleBtn_Click(object sender, EventArgs e)
         {
-            CreateVehicle newVehicle = new CreateVehicle();
+            CreateVehicleForm newVehicle = new CreateVehicleForm();
             newVehicle.Show();
         }
 
         private void ReturnBtn_Click(object sender, EventArgs e)
         {
-            MainLogin mainLogin = new MainLogin();
+            MainLoginForm mainLogin = new MainLoginForm();
             Close();
             mainLogin.Show();
         }
 
         private void CreateRecordBtn_Click(object sender, EventArgs e)
         {
-            CreateEmployee addNewRecord = new CreateEmployee();
+            CreateEmployeeForm addNewRecord = new CreateEmployeeForm();
             addNewRecord.Show();
         }
 

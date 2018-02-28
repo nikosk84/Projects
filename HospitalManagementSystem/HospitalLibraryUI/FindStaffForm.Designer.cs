@@ -1,6 +1,6 @@
 ﻿namespace HospitalSystemUI
 {
-    partial class FindStaff
+    partial class FindStaffForm
     {
         /// <summary>
         /// Required designer variable.
@@ -28,88 +28,88 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FindStaff));
-            this.employeesFoundLb = new System.Windows.Forms.ListBox();
-            this.lastNameTb = new System.Windows.Forms.TextBox();
-            this.searchLastNameBtn = new System.Windows.Forms.Button();
-            this.searchStaffMainLbl = new System.Windows.Forms.Label();
-            this.lastNameLbl = new System.Windows.Forms.Label();
-            this.returnBtn = new System.Windows.Forms.Button();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FindStaffForm));
+            this.EmployeesFoundListBox = new System.Windows.Forms.ListBox();
+            this.LastNameText = new System.Windows.Forms.TextBox();
+            this.SearchLastNameButton = new System.Windows.Forms.Button();
+            this.FindStaffTitle = new System.Windows.Forms.Label();
+            this.LastNameLabel = new System.Windows.Forms.Label();
+            this.ReturnButton = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
-            // employeesFoundLb
+            // EmployeesFoundListBox
             // 
-            this.employeesFoundLb.Font = new System.Drawing.Font("Segoe UI", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.employeesFoundLb.FormattingEnabled = true;
-            this.employeesFoundLb.Location = new System.Drawing.Point(14, 135);
-            this.employeesFoundLb.Name = "employeesFoundLb";
-            this.employeesFoundLb.Size = new System.Drawing.Size(652, 186);
-            this.employeesFoundLb.TabIndex = 0;
+            this.EmployeesFoundListBox.Font = new System.Drawing.Font("Segoe UI", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.EmployeesFoundListBox.FormattingEnabled = true;
+            this.EmployeesFoundListBox.Location = new System.Drawing.Point(14, 135);
+            this.EmployeesFoundListBox.Name = "EmployeesFoundListBox";
+            this.EmployeesFoundListBox.Size = new System.Drawing.Size(652, 186);
+            this.EmployeesFoundListBox.TabIndex = 0;
             // 
-            // lastNameTb
+            // LastNameText
             // 
-            this.lastNameTb.Location = new System.Drawing.Point(14, 88);
-            this.lastNameTb.Multiline = true;
-            this.lastNameTb.Name = "lastNameTb";
-            this.lastNameTb.Size = new System.Drawing.Size(152, 28);
-            this.lastNameTb.TabIndex = 1;
+            this.LastNameText.Location = new System.Drawing.Point(14, 88);
+            this.LastNameText.Multiline = true;
+            this.LastNameText.Name = "LastNameText";
+            this.LastNameText.Size = new System.Drawing.Size(152, 28);
+            this.LastNameText.TabIndex = 1;
             // 
-            // searchLastNameBtn
+            // SearchLastNameButton
             // 
-            this.searchLastNameBtn.Font = new System.Drawing.Font("Segoe UI", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.searchLastNameBtn.Location = new System.Drawing.Point(15, 327);
-            this.searchLastNameBtn.Name = "searchLastNameBtn";
-            this.searchLastNameBtn.Size = new System.Drawing.Size(82, 32);
-            this.searchLastNameBtn.TabIndex = 2;
-            this.searchLastNameBtn.Text = "Search";
-            this.searchLastNameBtn.UseVisualStyleBackColor = true;
-            this.searchLastNameBtn.Click += new System.EventHandler(this.SearchLastNameBtn_Click);
+            this.SearchLastNameButton.Font = new System.Drawing.Font("Segoe UI", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.SearchLastNameButton.Location = new System.Drawing.Point(15, 327);
+            this.SearchLastNameButton.Name = "SearchLastNameButton";
+            this.SearchLastNameButton.Size = new System.Drawing.Size(82, 32);
+            this.SearchLastNameButton.TabIndex = 2;
+            this.SearchLastNameButton.Text = "Search";
+            this.SearchLastNameButton.UseVisualStyleBackColor = true;
+            this.SearchLastNameButton.Click += new System.EventHandler(this.SearchLastNameBtn_Click);
             // 
-            // searchStaffMainLbl
+            // FindStaffTitle
             // 
-            this.searchStaffMainLbl.AutoSize = true;
-            this.searchStaffMainLbl.Font = new System.Drawing.Font("Segoe UI", 24F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.searchStaffMainLbl.Location = new System.Drawing.Point(145, 9);
-            this.searchStaffMainLbl.Name = "searchStaffMainLbl";
-            this.searchStaffMainLbl.Size = new System.Drawing.Size(388, 45);
-            this.searchStaffMainLbl.TabIndex = 4;
-            this.searchStaffMainLbl.Text = "Search Staff by Last Name";
+            this.FindStaffTitle.AutoSize = true;
+            this.FindStaffTitle.Font = new System.Drawing.Font("Segoe UI", 24F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.FindStaffTitle.Location = new System.Drawing.Point(145, 9);
+            this.FindStaffTitle.Name = "FindStaffTitle";
+            this.FindStaffTitle.Size = new System.Drawing.Size(388, 45);
+            this.FindStaffTitle.TabIndex = 4;
+            this.FindStaffTitle.Text = "Search Staff by Last Name";
             // 
-            // lastNameLbl
+            // LastNameLabel
             // 
-            this.lastNameLbl.AutoSize = true;
-            this.lastNameLbl.Font = new System.Drawing.Font("Segoe UI", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lastNameLbl.Location = new System.Drawing.Point(12, 72);
-            this.lastNameLbl.Name = "lastNameLbl";
-            this.lastNameLbl.Size = new System.Drawing.Size(89, 13);
-            this.lastNameLbl.TabIndex = 5;
-            this.lastNameLbl.Text = "Enter Last Name";
+            this.LastNameLabel.AutoSize = true;
+            this.LastNameLabel.Font = new System.Drawing.Font("Segoe UI", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.LastNameLabel.Location = new System.Drawing.Point(12, 72);
+            this.LastNameLabel.Name = "LastNameLabel";
+            this.LastNameLabel.Size = new System.Drawing.Size(89, 13);
+            this.LastNameLabel.TabIndex = 5;
+            this.LastNameLabel.Text = "Enter Last Name";
             // 
-            // returnBtn
+            // ReturnButton
             // 
-            this.returnBtn.Font = new System.Drawing.Font("Segoe UI", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.returnBtn.Location = new System.Drawing.Point(103, 327);
-            this.returnBtn.Name = "returnBtn";
-            this.returnBtn.Size = new System.Drawing.Size(82, 32);
-            this.returnBtn.TabIndex = 44;
-            this.returnBtn.Text = "Return";
-            this.returnBtn.UseVisualStyleBackColor = true;
-            this.returnBtn.Click += new System.EventHandler(this.ReturnBtn_Click);
+            this.ReturnButton.Font = new System.Drawing.Font("Segoe UI", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.ReturnButton.Location = new System.Drawing.Point(103, 327);
+            this.ReturnButton.Name = "ReturnButton";
+            this.ReturnButton.Size = new System.Drawing.Size(82, 32);
+            this.ReturnButton.TabIndex = 44;
+            this.ReturnButton.Text = "Return";
+            this.ReturnButton.UseVisualStyleBackColor = true;
+            this.ReturnButton.Click += new System.EventHandler(this.ReturnBtn_Click);
             // 
-            // FindStaff
+            // FindStaffForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(678, 380);
-            this.Controls.Add(this.returnBtn);
-            this.Controls.Add(this.lastNameLbl);
-            this.Controls.Add(this.searchStaffMainLbl);
-            this.Controls.Add(this.searchLastNameBtn);
-            this.Controls.Add(this.lastNameTb);
-            this.Controls.Add(this.employeesFoundLb);
+            this.Controls.Add(this.ReturnButton);
+            this.Controls.Add(this.LastNameLabel);
+            this.Controls.Add(this.FindStaffTitle);
+            this.Controls.Add(this.SearchLastNameButton);
+            this.Controls.Add(this.LastNameText);
+            this.Controls.Add(this.EmployeesFoundListBox);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
-            this.Name = "FindStaff";
+            this.Name = "FindStaffForm";
             this.Text = "Find Staff Member";
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -118,11 +118,11 @@
 
         #endregion
 
-        private System.Windows.Forms.ListBox employeesFoundLb;
-        private System.Windows.Forms.TextBox lastNameTb;
-        private System.Windows.Forms.Button searchLastNameBtn;
-        private System.Windows.Forms.Label searchStaffMainLbl;
-        private System.Windows.Forms.Label lastNameLbl;
-        private System.Windows.Forms.Button returnBtn;
+        private System.Windows.Forms.ListBox EmployeesFoundListBox;
+        private System.Windows.Forms.TextBox LastNameText;
+        private System.Windows.Forms.Button SearchLastNameButton;
+        private System.Windows.Forms.Label FindStaffTitle;
+        private System.Windows.Forms.Label LastNameLabel;
+        private System.Windows.Forms.Button ReturnButton;
     }
 }

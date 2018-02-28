@@ -1,6 +1,8 @@
 ﻿namespace HospitalLibrary.Models
 {
-    //Maps the result from database lookup
+    /// <summary>
+    /// Properties of our system admin (the guy that has access)
+    /// </summary>
     public class SysUserModel
     {
         public int Id { get; set; }

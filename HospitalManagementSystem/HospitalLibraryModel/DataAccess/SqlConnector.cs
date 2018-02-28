@@ -65,24 +65,6 @@ namespace HospitalLibrary.DataAccess
         }
 
         /// <summary>
-        /// Return system user from database, validate and log in
-        /// </summary>
-        /// <param name="sysUser"></param>
-        /// <returns></returns>
-        public SysUserModel LogOn(SysUserModel sysUser)
-        {
-            //Not working
-            using (IDbConnection connection = new System.Data.SqlClient.SqlConnection(GlobalConfiguration.ConnVal("HospitalModelDB")))
-            {
-                var parameters = new DynamicParameters();
-                parameters.Add("@UserName", sysUser.UserName);
-                parameters.Add("@Password", sysUser.Password);
-
-                connection.Execute("dbo.spLogin", parameters, commandType: CommandType.StoredProcedure);
-                return sysUser;
-            }
-        }
-        /// <summary>
         /// Get employee by last name and display record in ListBox
         /// </summary>
         /// <param name="lastName"></param>
@@ -93,6 +75,21 @@ namespace HospitalLibrary.DataAccess
             {
                 var output = connection.Query<EmployeeModel>("dbo.spEmployee_GetByLastName @LastName", new { LastName = lastName }).ToList();
                 return output;
+            }
+        }
+
+        /// <summary>
+        /// Get log on credentials from database and log user into system
+        /// </summary>
+        /// <param name="userName"></param>
+        /// <param name="password"></param>
+        /// <returns></returns>
+        public SysUserModel LogOn(string userName, string password)
+        {
+            using (IDbConnection connection = new System.Data.SqlClient.SqlConnection(GlobalConfiguration.ConnVal("HospitalModelDB")))
+            {
+                var sysUser = connection.Query<SysUserModel>("dbo.spLogin", new { UserName = userName, Password = password }, commandType: CommandType.StoredProcedure).First();
+                return sysUser;
             }
         }
     }

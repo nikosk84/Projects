@@ -3,7 +3,9 @@
 {
     public class EmployeeModel
     {
-        //Employee properties
+        /// <summary>
+        /// Properties of an employee
+        /// </summary>
         public int Id { get; set; }
         public string FirstName { get; set; }
         public string LastName { get; set; }
@@ -12,7 +14,9 @@
         public string CellNumber { get; set; }
         public string Position { get; set; }
 
-        // Output string from lookup
+        /// <summary>
+        /// Output string layout for a returned employee
+        /// </summary>
         public string FullEmployeeInfo
         {
             get

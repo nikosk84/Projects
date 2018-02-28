@@ -10,7 +10,6 @@ C:\Users\Nikos\Documents\Visual Studio 2017\Projects\HospitalManagementSystem\Ho
 C:\Users\Nikos\Documents\Visual Studio 2017\Projects\HospitalManagementSystem\HospitalLibraryModel\bin\Debug\HospitalLibrary.pdb
 C:\Users\Nikos\Documents\Visual Studio 2017\Projects\HospitalManagementSystem\HospitalLibraryModel\bin\Debug\Dapper.dll
 C:\Users\Nikos\Documents\Visual Studio 2017\Projects\HospitalManagementSystem\HospitalLibraryModel\bin\Debug\Dapper.xml
-C:\Users\Nikos\Documents\Visual Studio 2017\Projects\HospitalManagementSystem\HospitalLibraryModel\obj\Debug\HospitalLibrary.csprojResolveAssemblyReference.cache
 C:\Users\Nikos\Documents\Visual Studio 2017\Projects\HospitalManagementSystem\HospitalLibraryModel\obj\Debug\HospitalLibrary.csproj.CoreCompileInputs.cache
 C:\Users\Nikos\Documents\Visual Studio 2017\Projects\HospitalManagementSystem\HospitalLibraryModel\obj\Debug\HospitalLibrary.dll
 C:\Users\Nikos\Documents\Visual Studio 2017\Projects\HospitalManagementSystem\HospitalLibraryModel\obj\Debug\HospitalLibrary.pdb
