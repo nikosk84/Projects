@@ -1,5 +1,0 @@
-C:\Users\Nikos\Documents\Visual Studio 2017\Projects\HospitalManagementSystem\HospitalLibrary\bin\Debug\HospitalLibrary.dll
-C:\Users\Nikos\Documents\Visual Studio 2017\Projects\HospitalManagementSystem\HospitalLibrary\bin\Debug\HospitalLibrary.pdb
-C:\Users\Nikos\Documents\Visual Studio 2017\Projects\HospitalManagementSystem\HospitalLibrary\obj\Debug\HospitalLibraryModel.csproj.CoreCompileInputs.cache
-C:\Users\Nikos\Documents\Visual Studio 2017\Projects\HospitalManagementSystem\HospitalLibrary\obj\Debug\HospitalLibrary.dll
-C:\Users\Nikos\Documents\Visual Studio 2017\Projects\HospitalManagementSystem\HospitalLibrary\obj\Debug\HospitalLibrary.pdb
