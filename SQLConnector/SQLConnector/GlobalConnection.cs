@@ -9,7 +9,7 @@ namespace SQLConnector
         /// </summary>
         /// <param name="name"></param>
         /// <returns></returns>
-        public static string ConnectionValue(string name)
+        public static string Connection(string name)
         {
            return ConfigurationManager.ConnectionStrings[name].ConnectionString;
         }

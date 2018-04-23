@@ -14,7 +14,7 @@ namespace SQLConnector
         /// <returns></returns>
         public List<Person> GetPerson(string lastName)
         {
-            using (IDbConnection connection = new System.Data.SqlClient.SqlConnection(GlobalConnection.ConnectionValue("SQLConnectorTester")))
+            using (IDbConnection connection = new System.Data.SqlClient.SqlConnection(GlobalConnection.Connection("SQLConnectorTester")))
             {
                 var output = connection.Query<Person>("dbo.spPerson_GetByLastName @LastName", new { LastName = lastName }).ToList();
                 return output;
