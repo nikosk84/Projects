@@ -19,4 +19,4 @@ A simple Async file downloader that can display download progress, bytes receive
 
 # SQL Connector (.NET Framework 4.6.1)
 
-A simple example on how to get data from an SQL server using Dapper.
+A simple example on how to get data from an SQL server using Dapper. (Local databases).
