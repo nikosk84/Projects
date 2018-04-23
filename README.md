@@ -16,3 +16,7 @@ Hospital Management System has a goal of becoming a small sized, satisfactory Ho
 # File Downloader (.NET Framework 4.0)
 
 A simple Async file downloader that can display download progress, bytes received, download transfer rate and remaining download time. It also gives the user the option to provide credentials if a server requires a log on. Please note that depending on the download server, not all download details may be available, such as remaining download time and progress percentage.
+
+# SQL Connector (.NET Framework 4.6.1)
+
+A simple example on how to get data from an SQL server using Dapper.
