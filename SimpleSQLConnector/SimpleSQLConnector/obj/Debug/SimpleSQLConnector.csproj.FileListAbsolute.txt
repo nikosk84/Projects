@@ -1,0 +1,6 @@
+c:\users\home\documents\visual studio 2015\Projects\SimpleSQLConnector\SimpleSQLConnector\bin\Debug\SimpleSQLConnector.exe.config
+c:\users\home\documents\visual studio 2015\Projects\SimpleSQLConnector\SimpleSQLConnector\bin\Debug\SimpleSQLConnector.exe
+c:\users\home\documents\visual studio 2015\Projects\SimpleSQLConnector\SimpleSQLConnector\bin\Debug\SimpleSQLConnector.pdb
+c:\users\home\documents\visual studio 2015\Projects\SimpleSQLConnector\SimpleSQLConnector\obj\Debug\SimpleSQLConnector.csprojResolveAssemblyReference.cache
+c:\users\home\documents\visual studio 2015\Projects\SimpleSQLConnector\SimpleSQLConnector\obj\Debug\SimpleSQLConnector.exe
+c:\users\home\documents\visual studio 2015\Projects\SimpleSQLConnector\SimpleSQLConnector\obj\Debug\SimpleSQLConnector.pdb

@@ -2,7 +2,7 @@
 
 Branch that holds various personal projects that undergo constant changes and improvements.
 
-# Hospital Management System (.NET Framework 4.6.1)
+# Hospital Management System (Winforms .NET Framework 4.6.1)
 
 Hospital Management System uses C# in Visual Studio and Microsoft SSMS is a Hospital Management System and its first steps will be to support CRUD. Its first development stage will involve:
 
@@ -13,10 +13,14 @@ Hospital Management System uses C# in Visual Studio and Microsoft SSMS is a Hosp
 
 Hospital Management System has a goal of becoming a small sized, satisfactory Hospital Management System with useful features.
 
-# File Downloader (.NET Framework 4.0)
+# File Downloader (Winforms .NET Framework 4.0)
 
 A simple Async file downloader that can display download progress, bytes received, download transfer rate and remaining download time. It also gives the user the option to provide credentials if a server requires a log on. Please note that depending on the download server, not all download details may be available, such as remaining download time and progress percentage.
 
-# SQL Connector (.NET Framework 4.6.1)
+# SQL Connector (Winforms using Dapper .NET Framework 4.6.1)
 
 A simple example on how to get data from an SQL server using Dapper. (Local databases).
+
+# Simple SQL Connector (Console Application .NET Framework 4.0)
+
+A simple example on how to connect to an SQL Server. (Local databases).
