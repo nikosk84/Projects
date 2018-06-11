@@ -24,3 +24,7 @@ A simple example on how to get data from an SQL server using Dapper. (Local data
 # Simple SQL Connector (Console Application .NET Framework 4.0)
 
 A simple example on how to connect to an SQL Server. (Local databases).
+
+# SamplePageCSharp
+
+A basic skeleton to upload data from Excel Files to a table in SQL Server. Needs tweaking based on preferences.
